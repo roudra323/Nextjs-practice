@@ -24,9 +24,9 @@ export default function ValidatorCard({
   ctaText,
 }: ValidatorCardProps) {
   return (
-    <div className="relative flex flex-col items-start p-4 sm:p-5 w-full mx-auto max-w-[389px] md:max-w-none bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden">
+    <div className="relative flex flex-col items-start p-4 sm:p-5 w-full mx-auto max-w-97.25 md:max-w-none bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden">
       {/* Glow effect */}
-      <div className="absolute w-[273px] h-[211px] -left-[117px] -top-[159px] bg-white mix-blend-overlay blur-[61px] rotate-[30deg]" />
+      <div className="absolute w-68.25 h-52.75 -left-29.25 -top-39.75 bg-white mix-blend-overlay blur-[61px] rotate-30" />
 
       <div className="relative z-10 flex flex-col gap-6 w-full">
         {/* Header with icon and title */}
@@ -76,7 +76,7 @@ export default function ValidatorCard({
         </div>
 
         {/* Description */}
-        <p className="text-sm leading-[23px] tracking-[-0.15px] text-[#AAB3D0]">
+        <p className="text-sm leading-5.75 tracking-[-0.15px] text-[#AAB3D0]">
           {description}
         </p>
 

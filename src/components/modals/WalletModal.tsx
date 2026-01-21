@@ -66,7 +66,7 @@ export default function WalletModal({ isOpen, onClose }: WalletModalProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-3 sm:top-[17px] right-3 sm:right-[17px] w-4 h-4 opacity-70 hover:opacity-100 transition-opacity z-20 rounded-[2px]"
+          className="absolute top-3 sm:top-4.25 right-3 sm:right-4.25 w-4 h-4 opacity-70 hover:opacity-100 transition-opacity z-20 rounded-[2px]"
         >
           <CloseIcon />
         </button>

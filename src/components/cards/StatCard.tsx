@@ -12,9 +12,9 @@ export default function StatCard({
   value,
 }: StatCardProps) {
   return (
-    <div className="relative flex mx-auto flex-col p-6 w-full max-w-[389px] h-[133px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+    <div className="relative flex mx-auto flex-col p-6 w-full max-w-97.25 h-33.25 bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
       {/* Glow effect */}
-      <div className="absolute w-[162px] h-[125px] -left-[70px] -top-[72px] bg-white mix-blend-overlay blur-[56px] rotate-[30deg]" />
+      <div className="absolute w-40.5 h-31.25 -left-17.5 -top-18 bg-white mix-blend-overlay blur-[56px] rotate-30" />
 
       <div className="relative z-10 flex justify-between items-start">
         <div className="flex flex-col gap-6">

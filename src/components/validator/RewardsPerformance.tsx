@@ -24,9 +24,9 @@ export default function RewardsPerformance() {
           Rewards & Performance
         </h2>
         {/* Krown Foundation Badge */}
-        <div className="flex items-center gap-[7px]">
+        <div className="flex items-center gap-1.75">
           <div className="flex items-center justify-center w-5 h-5 bg-[#00C48C] shadow-[inset_0px_0px_6px_rgba(255,255,255,0.25)] rounded-md">
-            <span className="font-grotesk font-bold text-xs leading-[15px] text-white">
+            <span className="font-grotesk font-bold text-xs leading-3.75 text-white">
               KF
             </span>
           </div>
@@ -38,14 +38,8 @@ export default function RewardsPerformance() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
-        {cardData.map((card, index) => (
-          <InfoCard
-            key={index}
-            label={card.label}
-            value={card.value}
-            valueSuffix={card.valueSuffix}
-            icon={card.icon}
-          />
+        {cardData.map((card) => (
+          <InfoCard key={card.label} {...card} />
         ))}
 
         {/* Net Rewards - spans full width */}

@@ -13,7 +13,7 @@ const metrics = [
   { label: "Avg Tip/Tx", value: "65,000" },
   // Row 3
   { label: "Avg Gas/Block", value: "2,847.3" },
-  { label: "Avg Gas/Block", value: "2,847.3" },
+  { label: "Avg Fee/Block", value: "2,847.3" },
   { label: "Max Tx in Block", value: "0" },
   { label: "Min Tx in Block", value: "65,000" },
   // Extra
@@ -33,53 +33,23 @@ export default function NodePerformanceOverview() {
           {/* Admin Panel */}
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-[#34394D] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl">
-              <span className="font-grotesk font-bold text-sm sm:text-[15px] leading-[19px] text-white">
+              <span className="font-grotesk font-bold text-sm sm:text-[15px] leading-4.75 text-white">
                 KF
               </span>
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="font-vietnam font-medium text-sm sm:text-base leading-5 tracking-[-0.15px] text-white">
-                Krown Foundation
-              </span>
-              <span className="font-vietnam font-normal text-xs leading-4 text-[#AAB3D0]">
-                0x60D6...9fe4
+              <span className="font-vietnam font-medium text-sm sm:text-base leading-5 tracking-[-0.15px] text-[#AAB3D0] max-w-145.5">
+                Admin Panel
               </span>
             </div>
           </div>
-
-          {/* Description */}
-          <p className="font-vietnam font-normal text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0] max-w-[582px]">
-            High-performance validator built for the Monad community,
-            reinvesting into open data.
-          </p>
-        </div>
-
-        {/* Right Side Info */}
-        <div className="flex flex-col items-start lg:items-end gap-2 flex-wrap">
-          {/* Live Status */}
-          <div className="flex items-center gap-2">
-            <span className="text-lg sm:text-xl">🇫🇷</span>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#00C48C] rounded-full" />
-              <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#00C48C]">
-                LIVE
-              </span>
-            </div>
-          </div>
-          {/* Validator Info */}
-          <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white whitespace-nowrap">
-            Validator ID : 3
-          </span>
-          <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white whitespace-nowrap">
-            Commission : 10%
-          </span>
         </div>
       </div>
 
       {/* Metrics Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
-        {metrics.map((metric, index) => (
-          <MetricCard key={index} label={metric.label} value={metric.value} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        {metrics.map((metric) => (
+          <MetricCard key={metric.label} {...metric} />
         ))}
       </div>
     </div>
