@@ -24,8 +24,8 @@ export default function NodePerformanceOverview() {
   return (
     <div className="flex flex-col p-4 sm:p-6 w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl sm:rounded-3xl">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-0 mb-4 sm:mb-6">
-        <div className="flex flex-col gap-3 sm:gap-4">
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-0 mb-4 sm:mb-6">
+        <div className="flex flex-col gap-3 sm:gap-4 mr-3 lg:mr-0">
           <h2 className="font-vietnam font-medium text-lg sm:text-xl leading-6 tracking-[-0.3125px] text-white">
             Node Performance Overview
           </h2>
@@ -55,7 +55,7 @@ export default function NodePerformanceOverview() {
         </div>
 
         {/* Right Side Info */}
-        <div className="flex flex-row lg:flex-col items-start lg:items-end gap-2 flex-wrap">
+        <div className="flex flex-col items-start lg:items-end gap-2 flex-wrap">
           {/* Live Status */}
           <div className="flex items-center gap-2">
             <span className="text-lg sm:text-xl">🇫🇷</span>
@@ -67,10 +67,10 @@ export default function NodePerformanceOverview() {
             </div>
           </div>
           {/* Validator Info */}
-          <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white">
+          <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white whitespace-nowrap">
             Validator ID : 3
           </span>
-          <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white">
+          <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white whitespace-nowrap">
             Commission : 10%
           </span>
         </div>
