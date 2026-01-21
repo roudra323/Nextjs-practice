@@ -12,3 +12,9 @@ export * from "./modals";
 
 // Icons
 export * from "./icons";
+
+// Banner components
+export * from "./banners";
+
+// Validator components
+export * from "./validator";
