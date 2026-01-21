@@ -32,14 +32,14 @@ const cardData = [
 
 export default function ValidatorIdentityStatus() {
   return (
-    <div className="flex flex-col p-6 w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
+    <div className="flex flex-col p-4 sm:p-6 w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl sm:rounded-3xl">
       {/* Header */}
-      <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.3125px] text-white mb-6">
+      <h2 className="font-vietnam font-medium text-lg sm:text-xl leading-6 tracking-[-0.3125px] text-white mb-4 sm:mb-6">
         Validator Identity & Status
       </h2>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
         {cardData.map((card, index) => (
           <InfoCard
             key={index}

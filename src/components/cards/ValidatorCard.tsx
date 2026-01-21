@@ -24,7 +24,7 @@ export default function ValidatorCard({
   ctaText,
 }: ValidatorCardProps) {
   return (
-    <div className="relative flex flex-col items-start p-5 w-full max-w-[389px] bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden">
+    <div className="relative flex flex-col items-start p-4 sm:p-5 w-full mx-auto max-w-[389px] md:max-w-none bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden">
       {/* Glow effect */}
       <div className="absolute w-[273px] h-[211px] -left-[117px] -top-[159px] bg-white mix-blend-overlay blur-[61px] rotate-[30deg]" />
 

@@ -24,14 +24,14 @@ const stats = [
 
 export default function KNStats() {
   return (
-    <section className="relative w-full py-12">
+    <section className="relative w-full py-8 sm:py-10 md:py-12 border border-red-500">
       {/* Section Title */}
-      <h2 className="font-medium text-[32px] leading-[44px] tracking-[-0.02em] text-[#DEFFF5] text-center mb-10">
+      <h2 className="font-medium text-2xl sm:text-[28px] md:text-[32px] leading-8 sm:leading-10 md:leading-11 tracking-[-0.02em] text-[#DEFFF5] text-center mb-6 sm:mb-8 md:mb-10 px-4">
         KROWN Network at a glance
       </h2>
 
       {/* Stats Grid */}
-      <div className="max-w-[1216px] mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-[1216px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
         {stats.map((stat, index) => (
           <StatCard key={index} {...stat} />
         ))}

@@ -17,10 +17,10 @@ const cardData = [
 
 export default function RewardsPerformance() {
   return (
-    <div className="flex flex-col p-6 w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
+    <div className="flex flex-col p-4 sm:p-6 w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl sm:rounded-3xl">
       {/* Header */}
-      <div className="flex justify-between mb-6">
-        <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.3125px] text-white">
+      <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0 mb-4 sm:mb-6">
+        <h2 className="font-vietnam font-medium text-lg sm:text-xl leading-6 tracking-[-0.3125px] text-white">
           Rewards & Performance
         </h2>
         {/* Krown Foundation Badge */}
@@ -30,14 +30,14 @@ export default function RewardsPerformance() {
               KF
             </span>
           </div>
-          <span className="font-vietnam font-medium text-base leading-5 tracking-[-0.15px] text-[#AAB3D0]">
+          <span className="font-vietnam font-medium text-sm sm:text-base leading-5 tracking-[-0.15px] text-[#AAB3D0]">
             Krown Foundation
           </span>
         </div>
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
         {cardData.map((card, index) => (
           <InfoCard
             key={index}
