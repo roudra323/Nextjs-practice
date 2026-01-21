@@ -58,7 +58,7 @@ export default function WalletModal({ isOpen, onClose }: WalletModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/50 p-4 border border-red-500">
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/50 p-4 ">
       <div className="relative w-full max-w-lg bg-[#0B0E17] border border-white/10 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-2xl sm:rounded-[24px] overflow-hidden">
         {/* Glow effect */}
         <div className="absolute w-[486.25px] h-[376.09px] -left-[144.35px] -top-[156.04px] bg-white mix-blend-overlay blur-[61.22px] rotate-30" />

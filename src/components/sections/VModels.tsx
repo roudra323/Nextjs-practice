@@ -42,7 +42,7 @@ const validators = [
 
 export default function VModels() {
   return (
-    <section className="relative w-full py-8 sm:py-10 md:py-12 border border-red-500">
+    <section className="relative w-full py-8 sm:py-10 md:py-12">
       {/* Section Title */}
       <h2 className="font-medium text-2xl sm:text-[28px] md:text-[32px] leading-8 sm:leading-10 md:leading-[44px] tracking-[-0.02em] text-[#DEFFF5] text-center mb-6 sm:mb-8 md:mb-10 px-4">
         Validator Models
