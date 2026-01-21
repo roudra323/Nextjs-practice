@@ -15,7 +15,7 @@ export default function MetricCard({
 }: MetricCardProps) {
   return (
     <div className="flex flex-col p-4 w-full h-auto justify-between items-center bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl">
-      <div className="flex flex-col sm:flex-row items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-center justify-between w-full">
         <span className="font-vietnam font-medium text-sm leading-[19px] text-[#AAB3D0]">
           {label}
         </span>
