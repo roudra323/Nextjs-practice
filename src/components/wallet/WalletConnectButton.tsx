@@ -2,6 +2,7 @@
 
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import WalletModal from "../modals/WalletModal";
+import { WalletInfoModal } from "../modals";
 import { useState } from "react";
 
 interface WalletConnectButtonProps {
@@ -10,6 +11,7 @@ interface WalletConnectButtonProps {
 
 export function WalletConnectButton({ className }: WalletConnectButtonProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   return (
     <>
@@ -73,7 +75,7 @@ export function WalletConnectButton({ className }: WalletConnectButtonProps) {
                 return (
                   <div className="flex items-center gap-2">
                     <button
-                      onClick={openAccountModal}
+                      onClick={() => setIsInfoModalOpen(true)}
                       type="button"
                       className="flex items-center gap-2 px-3 sm:px-4 h-9 sm:h-10.5 bg-[#1F222B] border border-[#3A3A3A] rounded-xl"
                     >
@@ -114,6 +116,10 @@ export function WalletConnectButton({ className }: WalletConnectButtonProps) {
 
       {/* Wallet Modal */}
       <WalletModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <WalletInfoModal
+        isOpen={isInfoModalOpen}
+        onClose={() => setIsInfoModalOpen(false)}
+      />
     </>
   );
 }
