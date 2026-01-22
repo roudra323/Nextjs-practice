@@ -49,7 +49,7 @@ export default function ValidatorNavbar({ onMenuClick }: ValidatorNavbarProps) {
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="flex-shrink-0"
+              className="shrink-0"
             >
               <path
                 d="M14.6667 5.33333V4C14.6667 2.66667 13.6667 1.66667 12.3333 1.66667H3.66667C2.33333 1.66667 1.33333 2.66667 1.33333 4V12C1.33333 13.3333 2.33333 14.3333 3.66667 14.3333H12.3333C13.6667 14.3333 14.6667 13.3333 14.6667 12V10.6667"
