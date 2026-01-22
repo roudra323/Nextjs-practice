@@ -7,24 +7,30 @@ import {
 import { createConfig, http } from 'wagmi';
 import { mainnet, sepolia, polygon, optimism, arbitrum } from 'wagmi/chains';
 
-const connectors = connectorsForWallets(
-    [
-        {
-            groupName: 'Recommended',
-            wallets: [
-                metaMaskWallet,
-                walletConnectWallet,
-            ],
-        },
-    ],
-    {
-        appName: 'VOM',
-        projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '',
+const getConnectors = () => {
+    if (typeof window === 'undefined') {
+        return [];
     }
-);
+
+    return connectorsForWallets(
+        [
+            {
+                groupName: 'Recommended',
+                wallets: [
+                    metaMaskWallet,
+                    walletConnectWallet,
+                ],
+            },
+        ],
+        {
+            appName: 'VOM',
+            projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '',
+        }
+    );
+};
 
 export const config = createConfig({
-    connectors,
+    connectors: getConnectors(),
     chains: [mainnet, sepolia, polygon, optimism, arbitrum],
     transports: {
         [mainnet.id]: http(),
