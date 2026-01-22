@@ -49,7 +49,7 @@ export function WalletConnectButton({ className }: WalletConnectButtonProps) {
                     <button
                       onClick={() => setIsModalOpen(true)}
                       type="button"
-                      className="flex items-center justify-center px-3 sm:px-4.5 py-1.5 sm:py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity"
+                      className="flex items-center justify-center px-3 sm:px-4.5 py-1.5 sm:py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity cursor-pointer"
                     >
                       <span className="font-medium font-vietnam text-sm sm:text-base leading-[150%] text-white">
                         Connect
@@ -63,7 +63,7 @@ export function WalletConnectButton({ className }: WalletConnectButtonProps) {
                     <button
                       onClick={openChainModal}
                       type="button"
-                      className="flex items-center justify-center px-3 sm:px-4.5 py-1.5 sm:py-2 gap-1.5 bg-red-500 rounded-xl hover:opacity-90 transition-opacity"
+                      className="flex items-center justify-center px-3 sm:px-4.5 py-1.5 sm:py-2 gap-1.5 bg-red-500 rounded-xl hover:opacity-90 transition-opacity cursor-pointer"
                     >
                       <span className="font-medium text-sm sm:text-base leading-[150%] text-white">
                         Wrong network
@@ -77,7 +77,7 @@ export function WalletConnectButton({ className }: WalletConnectButtonProps) {
                     <button
                       onClick={() => setIsInfoModalOpen(true)}
                       type="button"
-                      className="flex items-center gap-2 px-3 sm:px-4 h-9 sm:h-10.5 bg-[#1F222B] border border-[#3A3A3A] rounded-xl"
+                      className="flex items-center gap-2 px-3 sm:px-4 h-9 sm:h-10.5 bg-[#1F222B] border border-[#3A3A3A] rounded-xl cursor-pointer"
                     >
                       <svg
                         width="16"

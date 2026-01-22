@@ -14,7 +14,7 @@ export default function Hero() {
         </p>
 
         {/* CTA Button */}
-        <button className="inline-flex items-center justify-center px-4.5 py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity">
+        <button className="inline-flex items-center justify-center px-4.5 py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity cursor-pointer">
           <span className="font-vietnam font-medium text-base leading-[150%] text-white">
             Start Validating
           </span>
