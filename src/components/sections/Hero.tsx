@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative w-full pt-24 sm:pt-32 md:pt-38.5 pb-12 sm:pb-16 md:pb-20">
@@ -14,11 +16,13 @@ export default function Hero() {
         </p>
 
         {/* CTA Button */}
-        <button className="inline-flex items-center justify-center px-4.5 py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity cursor-pointer">
-          <span className="font-vietnam font-medium text-base leading-[150%] text-white">
-            Start Validating
-          </span>
-        </button>
+        <Link href="/dashboard">
+          <button className="inline-flex items-center justify-center px-4.5 py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity cursor-pointer">
+            <span className="font-vietnam font-medium text-base leading-[150%] text-white">
+              Start Validating
+            </span>
+          </button>
+        </Link>
       </div>
     </section>
   );
