@@ -1,3 +1,5 @@
+import { TikIcon } from "../icons";
+
 interface ValidatorOptionCardProps {
   title: string;
   icon: React.ReactNode;
@@ -61,22 +63,7 @@ export default function ValidatorOptionCard({
               <div className="flex items-center gap-2">
                 {detail.isEligible && (
                   <div className="w-4 h-4 flex items-center justify-center">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="8"
-                        cy="8"
-                        r="6.67"
-                        stroke="#0E966F"
-                        strokeWidth="1.33"
-                      />
-                      <circle cx="8" cy="8" r="2" fill="#0E966F" />
-                    </svg>
+                    <TikIcon />
                   </div>
                 )}
                 <span
