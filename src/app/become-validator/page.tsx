@@ -6,9 +6,10 @@ import {
   HowItWorks,
   ValidatorSelection,
   ValidatorApplicationForm,
+  NodeConfigurationForm,
 } from "@/components/sections";
 
-type PageView = "select" | "how-it-works" | "application-form";
+type PageView = "select" | "how-it-works" | "application-form" | "node-setup";
 
 // Mock eligibility data
 const eligibilityData = [
@@ -68,7 +69,16 @@ export default function BecomeValidatorPage() {
 
   const handleContinueToNodeSetup = () => {
     console.log("Continuing to node setup...");
-    // Add navigation to next step
+    setCurrentView("node-setup");
+  };
+
+  const handleBackFromNodeSetup = () => {
+    setCurrentView("application-form");
+  };
+
+  const handleVerifyConfiguration = () => {
+    console.log("Verifying configuration...");
+    // Add navigation to Step 3 (Deposit Stake) later
   };
 
   return (
@@ -83,6 +93,12 @@ export default function BecomeValidatorPage() {
         <ValidatorApplicationForm
           onBack={handleBackFromApplication}
           onContinue={handleContinueToNodeSetup}
+        />
+      )}
+      {currentView === "node-setup" && (
+        <NodeConfigurationForm
+          onBack={handleBackFromNodeSetup}
+          onContinue={handleVerifyConfiguration}
         />
       )}
 
