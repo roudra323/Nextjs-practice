@@ -26,7 +26,7 @@ export default function ValidatorOptionCard({
   onApply,
 }: ValidatorOptionCardProps) {
   return (
-    <div className="flex flex-col items-start p-5 w-full max-w-[363px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl">
+    <div className="flex flex-col items-start p-5 w-full max-w-90.75 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl">
       <div className="flex flex-col items-start gap-6 w-full">
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center w-12 h-12 bg-white/5 border border-white/10 rounded-xl">
