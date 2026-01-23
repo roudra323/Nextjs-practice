@@ -18,3 +18,6 @@ export * from "./banners";
 
 // Validator components
 export * from "./validator";
+
+// Wallet components
+export * from "./wallet";

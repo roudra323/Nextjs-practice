@@ -1,6 +1,7 @@
 "use client";
 
 import { Bell, Menu } from "lucide-react";
+import { WalletConnectButton } from "../wallet";
 
 interface ValidatorNavbarProps {
   onMenuClick?: () => void;
@@ -42,34 +43,8 @@ export default function ValidatorNavbar({ onMenuClick }: ValidatorNavbarProps) {
           </button>
 
           {/* Wallet Address */}
-          <div className="flex items-center gap-2 px-3 sm:px-4 h-9 sm:h-[42px] bg-[#1F222B] border border-[#3A3A3A] rounded-xl">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="flex-shrink-0"
-            >
-              <path
-                d="M14.6667 5.33333V4C14.6667 2.66667 13.6667 1.66667 12.3333 1.66667H3.66667C2.33333 1.66667 1.33333 2.66667 1.33333 4V12C1.33333 13.3333 2.33333 14.3333 3.66667 14.3333H12.3333C13.6667 14.3333 14.6667 13.3333 14.6667 12V10.6667"
-                stroke="#00C48C"
-                strokeWidth="1.33"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M14.6667 5.33333H11.3333C10 5.33333 9.33333 6 9.33333 7.33333V8.66667C9.33333 10 10 10.6667 11.3333 10.6667H14.6667V5.33333Z"
-                stroke="#00C48C"
-                strokeWidth="1.33"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-[#AAB3D0]">
-              0x742d...9c4a
-            </span>
-          </div>
+          {/* Connect Button */}
+          <WalletConnectButton />
         </div>
       </div>
     </header>
