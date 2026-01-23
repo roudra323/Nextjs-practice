@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import { EligibilityCheckModal } from "@/components/modals";
-import { HowItWorks, ValidatorSelection } from "@/components/sections";
+import {
+  HowItWorks,
+  ValidatorSelection,
+  ValidatorApplicationForm,
+} from "@/components/sections";
 
-type PageView = "select" | "how-it-works";
+type PageView = "select" | "how-it-works" | "application-form";
 
 // Mock eligibility data
 const eligibilityData = [
@@ -55,17 +59,31 @@ export default function BecomeValidatorPage() {
 
   const handleStartOnboarding = () => {
     console.log("Starting onboarding process...");
-    // Add your onboarding logic here
+    setCurrentView("application-form");
+  };
+
+  const handleBackFromApplication = () => {
+    setCurrentView("how-it-works");
+  };
+
+  const handleContinueToNodeSetup = () => {
+    console.log("Continuing to node setup...");
+    // Add navigation to next step
   };
 
   return (
     <div className="flex flex-col w-full min-h-screen">
-      {currentView === "select" ? (
-        <ValidatorSelection onApply={handleApply} />
-      ) : (
+      {currentView === "select" && <ValidatorSelection onApply={handleApply} />}
+      {currentView === "how-it-works" && (
         <div className="px-6 py-6">
           <HowItWorks onStartOnboarding={handleStartOnboarding} />
         </div>
+      )}
+      {currentView === "application-form" && (
+        <ValidatorApplicationForm
+          onBack={handleBackFromApplication}
+          onContinue={handleContinueToNodeSetup}
+        />
       )}
 
       <EligibilityCheckModal
