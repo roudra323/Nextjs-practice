@@ -79,7 +79,8 @@ export default function ValidatorApplicationForm({
               Self-Hosted Validator Application
             </h2>
             <p className="font-vietnam font-normal text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
-              We&apos;ve checked your wallet against the requirements
+              Complete the form below to apply as a self-hosted validator on the
+              Krown network.
             </p>
           </div>
 
