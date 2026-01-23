@@ -442,25 +442,103 @@ export const TikIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_3099_4375)">
+    <g clipPath="url(#clip0_3099_4375)">
       <path
         d="M8.00001 14.6666C11.6819 14.6666 14.6667 11.6818 14.6667 7.99992C14.6667 4.31802 11.6819 1.33325 8.00001 1.33325C4.31811 1.33325 1.33334 4.31802 1.33334 7.99992C1.33334 11.6818 4.31811 14.6666 8.00001 14.6666Z"
         stroke="#0E966F"
-        stroke-width="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.33333"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6 8.00008L7.33333 9.33341L10 6.66675"
         stroke="#0E966F"
-        stroke-width="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.33333"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>
       <clipPath id="clip0_3099_4375">
         <rect width="16" height="16" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const EligibilityTikIcon = () => (
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+      stroke="#0E966F"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M11.25 15L13.75 17.5L18.75 12.5"
+      stroke="#0E966F"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const InfoIconGreen = () => (
+  <svg
+    width="51"
+    height="51"
+    viewBox="0 0 51 51"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_3669_6104)">
+      <circle
+        cx="25.3793"
+        cy="25.3793"
+        r="25.3793"
+        fill="#00C48C"
+        fillOpacity="0.05"
+      />
+      <circle
+        cx="25.3793"
+        cy="25.3793"
+        r="24.6293"
+        stroke="#00C48C"
+        strokeOpacity="0.1"
+        strokeWidth="1.5"
+      />
+    </g>
+    <path
+      d="M27.25 34.5502C26.55 35.1402 25.42 35.1402 24.74 34.5502L23.16 33.2002C22.86 32.9502 22.29 32.7402 21.89 32.7402L20.19 32.7402C19.13 32.7402 18.26 31.8702 18.26 30.8102L18.26 29.1102C18.26 28.7102 18.05 28.1502 17.8 27.8502L16.45 26.2702C15.86 25.5702 15.86 24.4402 16.45 23.7602L17.8 22.1802C18.05 21.8802 18.26 21.3202 18.26 20.9202L18.26 19.2202C18.26 18.1602 19.13 17.2902 20.19 17.2902L21.89 17.2902C22.29 17.2902 22.85 17.0802 23.15 16.8302L24.73 15.4802C25.43 14.8902 26.56 14.8902 27.24 15.4802L28.82 16.8302C29.12 17.0802 29.69 17.2902 30.08 17.2902L31.83 17.2902C32.89 17.2902 33.76 18.1602 33.76 19.2202L33.76 20.9302C33.76 21.3202 33.96 21.8902 34.21 22.1802L35.56 23.7702C36.14 24.4602 36.14 25.5802 35.56 26.2702L34.21 27.8602C33.96 28.1602 33.76 28.7202 33.76 29.1102L33.76 30.8002C33.76 31.8602 32.89 32.7302 31.83 32.7302L30.1 32.7302C29.7 32.7302 29.14 32.9402 28.84 33.1902L27.25 34.5502Z"
+      stroke="#00C48C"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M26 28.8701L26 24.0401"
+      stroke="#00C48C"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M26.0055 21L25.9965 21"
+      stroke="#00C48C"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <clipPath id="clip0_3669_6104">
+        <rect width="50.7586" height="50.7586" fill="white" />
       </clipPath>
     </defs>
   </svg>
