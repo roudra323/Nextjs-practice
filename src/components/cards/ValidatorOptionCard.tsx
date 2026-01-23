@@ -110,7 +110,7 @@ export default function ValidatorOptionCard({
         {/* Action Button */}
         <button
           onClick={onApply}
-          className="w-full h-10 bg-[#0E966F] rounded-xl font-vietnam font-medium text-base leading-6 tracking-[-0.31px] text-white text-center hover:bg-[#0C7D5D] transition-colors"
+          className="w-full h-10 bg-[#0E966F] rounded-xl font-vietnam font-medium text-base leading-6 tracking-[-0.31px] text-white text-center hover:bg-[#0C7D5D] transition-colors cursor-pointer"
         >
           {buttonText}
         </button>
