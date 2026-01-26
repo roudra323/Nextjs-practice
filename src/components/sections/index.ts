@@ -9,3 +9,4 @@ export { default as DepositStakeForm } from "./DepositStakeForm";
 export { default as GoLiveForm } from "./GoLiveForm";
 export { default as ManagedValidatorApplicationForm } from "./ManagedValidatorApplicationForm";
 export { default as SharedPoolsContent } from "./SharedPoolsContent";
+export { default as PoolManagementContent } from "./PoolManagementContent";
