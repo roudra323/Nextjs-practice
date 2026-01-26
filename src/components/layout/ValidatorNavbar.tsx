@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Bell, Menu } from "lucide-react";
 import { WalletConnectButton } from "../wallet";
-import { NotificationPanel, Notification } from "../modals";
+import { NotificationPanel, Notification, NodeSetupModal } from "../modals";
 
 interface ValidatorNavbarProps {
   onMenuClick?: () => void;
@@ -65,6 +65,7 @@ const sampleNotifications: Notification[] = [
 
 export default function ValidatorNavbar({ onMenuClick }: ValidatorNavbarProps) {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [isNodeSetupOpen, setIsNodeSetupOpen] = useState(false);
   const [notifications, setNotifications] = useState(sampleNotifications);
 
   const unreadCount = notifications.filter((n) => !n.isRead).length;
@@ -111,7 +112,10 @@ export default function ValidatorNavbar({ onMenuClick }: ValidatorNavbarProps) {
             </button>
 
             {/* Node Setup Instruction Button - hidden on small screens */}
-            <button className="hidden md:flex items-center justify-center px-3 lg:px-[18px] py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity">
+            <button
+              onClick={() => setIsNodeSetupOpen(true)}
+              className="hidden md:flex items-center justify-center px-3 lg:px-[18px] py-2 gap-1.5 bg-[#0E966F] rounded-xl shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] hover:opacity-90 transition-opacity"
+            >
               <span className="font-vietnam font-medium text-sm lg:text-base leading-6 tracking-[-0.3125px] text-white text-center">
                 Node Setup Instruction
               </span>
@@ -131,6 +135,12 @@ export default function ValidatorNavbar({ onMenuClick }: ValidatorNavbarProps) {
         notifications={notifications}
         unreadCount={unreadCount}
         onMarkAllRead={handleMarkAllRead}
+      />
+
+      {/* Node Setup Modal */}
+      <NodeSetupModal
+        isOpen={isNodeSetupOpen}
+        onClose={() => setIsNodeSetupOpen(false)}
       />
     </>
   );

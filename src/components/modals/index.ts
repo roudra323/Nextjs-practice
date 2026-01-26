@@ -6,4 +6,6 @@ export { default as StakePoolModal } from "./StakePoolModal";
 export { default as CreateSharedNodeModal } from "./CreateSharedNodeModal";
 export { default as RequestPoolCreationModal } from "./RequestPoolCreationModal";
 export { default as NotificationPanel } from "./NotificationPanel";
+export { default as NodeSetupModal } from "./NodeSetupModal";
+export { default as ContactFormPanel } from "./ContactFormPanel";
 export type { Notification } from "./NotificationPanel";
