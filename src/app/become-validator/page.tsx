@@ -7,9 +7,17 @@ import {
   ValidatorSelection,
   ValidatorApplicationForm,
   NodeConfigurationForm,
+  DepositStakeForm,
+  GoLiveForm,
 } from "@/components/sections";
 
-type PageView = "select" | "how-it-works" | "application-form" | "node-setup";
+type PageView =
+  | "select"
+  | "how-it-works"
+  | "application-form"
+  | "node-setup"
+  | "deposit-stake"
+  | "go-live";
 
 // Mock eligibility data
 const eligibilityData = [
@@ -78,7 +86,26 @@ export default function BecomeValidatorPage() {
 
   const handleVerifyConfiguration = () => {
     console.log("Verifying configuration...");
-    // Add navigation to Step 3 (Deposit Stake) later
+    setCurrentView("deposit-stake");
+  };
+
+  const handleBackFromDeposit = () => {
+    setCurrentView("node-setup");
+  };
+
+  const handleConfirmDeposit = () => {
+    console.log("Confirming deposit...");
+    setCurrentView("go-live");
+  };
+
+  const handleBackFromGoLive = () => {
+    setCurrentView("deposit-stake");
+  };
+
+  const handleGoToDashboard = () => {
+    console.log("Navigating to dashboard...");
+    // Navigate to dashboard
+    window.location.href = "/dashboard";
   };
 
   return (
@@ -99,6 +126,18 @@ export default function BecomeValidatorPage() {
         <NodeConfigurationForm
           onBack={handleBackFromNodeSetup}
           onContinue={handleVerifyConfiguration}
+        />
+      )}
+      {currentView === "deposit-stake" && (
+        <DepositStakeForm
+          onBack={handleBackFromDeposit}
+          onConfirm={handleConfirmDeposit}
+        />
+      )}
+      {currentView === "go-live" && (
+        <GoLiveForm
+          onBack={handleBackFromGoLive}
+          onGoToDashboard={handleGoToDashboard}
         />
       )}
 
