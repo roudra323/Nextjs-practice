@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Bell, Menu } from "lucide-react";
 import { WalletConnectButton } from "../wallet";
 import { NotificationPanel, Notification, NodeSetupModal } from "../modals";
+import { Notifications } from "../icons";
 
 interface ValidatorNavbarProps {
   onMenuClick?: () => void;
@@ -99,10 +100,7 @@ export default function ValidatorNavbar({ onMenuClick }: ValidatorNavbarProps) {
               onClick={() => setIsNotificationOpen(true)}
               className="relative flex items-center justify-center w-9 h-9 sm:w-[42px] sm:h-[42px] bg-[#1F222B] border border-[#3A3A3A] rounded-xl hover:bg-[#2a2d38] transition-colors"
             >
-              <Bell
-                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-                strokeWidth={1.5}
-              />
+              <Notifications />
               {/* Notification Badge */}
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 bg-[#0E966F] rounded-full text-white text-[10px] font-medium">
