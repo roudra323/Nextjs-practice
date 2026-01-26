@@ -1,18 +1,27 @@
 // Validator Icons
-export const ShieldIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#00C48C" strokeWidth="2.5">
+export const ShieldIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#00C48C"
+    strokeWidth="2.5"
+    className={className}
+  >
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     <path d="M9 12l2 2 4-4" />
   </svg>
 );
 
-export const ServerIcon = () => (
+export const ServerIcon = ({ size = 24, className = "" }) => (
   <svg
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M6 6.25V8.25"
@@ -73,8 +82,16 @@ export const ServerIcon = () => (
   </svg>
 );
 
-export const UsersIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#966DFF" strokeWidth="2">
+export const UsersIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#966DFF"
+    strokeWidth="2"
+    className={className}
+  >
     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
     <circle cx="9" cy="7" r="4" />
     <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -83,13 +100,14 @@ export const UsersIcon = () => (
 );
 
 // Stats Icons
-export const ValidatorsIcon = () => (
+export const ValidatorsIcon = ({ size = 32, className = "" }) => (
   <svg
-    width="32"
-    height="32"
+    width={size}
+    height={size}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M21.3333 28V25.3333C21.3333 23.9188 20.7714 22.5623 19.7712 21.5621C18.771 20.5619 17.4144 20 16 20H7.99996C6.58547 20 5.22892 20.5619 4.22872 21.5621C3.22853 22.5623 2.66663 23.9188 2.66663 25.3333V28"
@@ -122,13 +140,14 @@ export const ValidatorsIcon = () => (
   </svg>
 );
 
-export const StakedIcon = () => (
+export const StakedIcon = ({ size = 32, className = "" }) => (
   <svg
-    width="32"
-    height="32"
+    width={size}
+    height={size}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M10.6668 18.6667C15.0851 18.6667 18.6668 15.085 18.6668 10.6667C18.6668 6.24847 15.0851 2.66675 10.6668 2.66675C6.24853 2.66675 2.66681 6.24847 2.66681 10.6667C2.66681 15.085 6.24853 18.6667 10.6668 18.6667Z"
@@ -161,13 +180,14 @@ export const StakedIcon = () => (
   </svg>
 );
 
-export const APRIcon = () => (
+export const APRIcon = ({ size = 32, className = "" }) => (
   <svg
-    width="32"
-    height="32"
+    width={size}
+    height={size}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M21.3332 9.33325H29.3332V17.3333"
@@ -187,13 +207,14 @@ export const APRIcon = () => (
 );
 
 // Arrow Icon
-export const ArrowRightIcon = () => (
+export const ArrowRightIcon = ({ size = 16, className = "" }) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M3.33337 8H12.6667"
@@ -213,13 +234,14 @@ export const ArrowRightIcon = () => (
 );
 
 // Social Icons
-export const TelegramIcon = () => (
+export const TelegramIcon = ({ size = 16, className = "" }) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M13.3334 2.66675L7.33337 8.66675"
@@ -238,13 +260,14 @@ export const TelegramIcon = () => (
   </svg>
 );
 
-export const DiscordIcon = () => (
+export const DiscordIcon = ({ size = 16, className = "" }) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M13.5447 3.04408C12.5244 2.56872 11.4313 2.21356 10.2893 2.00008C10.2788 1.99832 10.268 2.00008 10.2587 2.00536C10.2493 2.01064 10.2421 2.01904 10.238 2.02936C10.0967 2.28536 9.94134 2.6168 9.832 2.88008C8.61333 2.68008 7.38667 2.68008 6.168 2.88008C6.04587 2.58839 5.90587 2.30409 5.74867 2.02936C5.74447 2.01921 5.73727 2.01097 5.72796 2.00573C5.71864 2.0005 5.70779 1.99862 5.69734 2.00008C4.556 2.21356 3.46267 2.56872 2.44267 3.04408C2.43384 3.04767 2.42633 3.0538 2.42134 3.0616C0.354004 6.16008 -0.213996 9.18008 0.0666704 12.1616C0.0673684 12.1683 0.0694087 12.1747 0.0726637 12.1805C0.0759187 12.1862 0.0803252 12.1912 0.0856704 12.1951C1.29667 13.0984 2.65134 13.7841 4.09334 14.2241C4.10352 14.2271 4.11437 14.2269 4.12445 14.2237C4.13454 14.2205 4.14341 14.2143 4.15 14.2061C4.44467 13.8061 4.70734 13.3831 4.93334 12.9381C4.93674 12.9314 4.93862 12.924 4.9389 12.9165C4.93917 12.909 4.93783 12.9016 4.93497 12.8947C4.93212 12.8878 4.92781 12.8816 4.92237 12.8767C4.91693 12.8717 4.91049 12.8681 4.90334 12.8661C4.49334 12.7121 4.09734 12.5261 3.71867 12.3101C3.71098 12.3057 3.70451 12.2995 3.69983 12.292C3.69515 12.2845 3.69242 12.276 3.69189 12.2672C3.69136 12.2584 3.69306 12.2496 3.69683 12.2416C3.7006 12.2335 3.70632 12.2266 3.71334 12.2211C3.79334 12.1611 3.87334 12.0991 3.95 12.0351C3.95768 12.0286 3.96701 12.0244 3.97694 12.0228C3.98687 12.0213 3.99702 12.0225 4.00622 12.0264C6.62267 13.2211 9.42867 13.2211 12.0133 12.0264C12.0226 12.0223 12.0329 12.0209 12.043 12.0223C12.053 12.0238 12.0625 12.0281 12.0702 12.0348C12.1469 12.0991 12.2267 12.1611 12.3073 12.2211C12.3144 12.2265 12.3202 12.2334 12.3241 12.2414C12.328 12.2494 12.3298 12.2582 12.3294 12.2671C12.329 12.2759 12.3264 12.2845 12.3218 12.292C12.3172 12.2996 12.3109 12.3058 12.3033 12.3101C11.926 12.5281 11.5287 12.7131 11.1173 12.8658C11.1102 12.8679 11.1038 12.8716 11.0984 12.8766C11.093 12.8816 11.0888 12.8879 11.086 12.8949C11.0833 12.9019 11.082 12.9093 11.0824 12.9168C11.0828 12.9243 11.0847 12.9316 11.0883 12.9381C11.3187 13.3828 11.582 13.8061 11.87 14.2058C11.8766 14.2143 11.8856 14.2207 11.8959 14.2241C11.9061 14.2274 11.9172 14.2277 11.9275 14.2241C13.3713 13.7851 14.7275 13.0991 15.9393 12.1951C15.9448 12.1914 15.9494 12.1867 15.9528 12.181C15.9562 12.1754 15.9584 12.169 15.9593 12.1624C16.2913 8.71608 15.4027 5.72008 13.566 3.06408C13.5617 3.05569 13.5547 3.04902 13.5463 3.04504L13.5447 3.04408ZM5.35067 10.3711C4.56334 10.3711 3.91534 9.64808 3.91534 8.76008C3.91534 7.87208 4.55 7.14908 5.35067 7.14908C6.15734 7.14908 6.79934 7.87808 6.786 8.76008C6.786 9.64808 6.15134 10.3711 5.35067 10.3711ZM10.6627 10.3711C9.87534 10.3711 9.22734 9.64808 9.22734 8.76008C9.22734 7.87208 9.862 7.14908 10.6627 7.14908C11.4693 7.14908 12.1113 7.87808 12.098 8.76008C12.098 9.64808 11.4697 10.3711 10.6627 10.3711Z"
@@ -253,13 +276,14 @@ export const DiscordIcon = () => (
   </svg>
 );
 
-export const TwitterIcon = () => (
+export const TwitterIcon = ({ size = 14, className = "" }) => (
   <svg
-    width="14"
-    height="14"
+    width={size}
+    height={size}
     viewBox="0 0 14 14"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M11.0833 0.583374H13.25L8.53333 6.00004L14 13.4167H9.73333L6.32667 8.95337L2.42 13.4167H0.252L5.28667 7.62671L0 0.584041H4.37333L7.46333 4.68004L11.0833 0.583374ZM10.3267 12.0867H11.5067L3.72 1.79337H2.44667L10.3267 12.0867Z"
@@ -268,13 +292,14 @@ export const TwitterIcon = () => (
   </svg>
 );
 
-export const LinkedInIcon = () => (
+export const LinkedInIcon = ({ size = 16, className = "" }) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M4.26667 14H1.96V5.94H4.26667V14ZM3.11333 4.92C2.36667 4.92 1.76 4.3 1.76 3.54C1.76 3.17517 1.90494 2.82536 2.16299 2.56731C2.42104 2.30926 2.77085 2.16432 3.13567 2.16432C3.50049 2.16432 3.85031 2.30926 4.10836 2.56731C4.36641 2.82536 4.51134 3.17517 4.51134 3.54C4.51134 4.3 3.90467 4.92 3.11333 4.92ZM14.24 14H11.94V10.08C11.94 9.2 11.92 8.08 10.72 8.08C9.5 8.08 9.32 9.04 9.32 10.02V14H7.02V5.94H9.24V6.98H9.27333C9.58 6.38 10.36 5.74 11.5 5.74C13.84 5.74 14.2467 7.28 14.2467 9.28V14H14.24Z"
@@ -283,14 +308,15 @@ export const LinkedInIcon = () => (
   </svg>
 );
 
-export const QastleIcon = () => (
+export const QastleIcon = ({ width = 31, height = 22, className = "" }) => (
   <svg
-    width="31"
-    height="22"
+    width={width}
+    height={height}
     viewBox="0 0 31 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
+    className={className}
   >
     <rect width="30.25" height="22" fill="url(#pattern0_1484_6363)" />
     <defs>
@@ -316,13 +342,14 @@ export const QastleIcon = () => (
   </svg>
 );
 
-export const MetaMaskIcon = () => (
+export const MetaMaskIcon = ({ size = 24, className = "" }) => (
   <svg
-    width="24"
-    height="23"
+    width={size}
+    height={size}
     viewBox="0 0 24 23"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M22.428 21.8907L17.2587 20.3827L13.36 22.6653H10.64L6.73867 20.3827L1.572 21.8893L0 16.6933L1.572 10.924L0 6.04533L1.572 0L9.64667 4.72533H14.3533L22.428 0L24 6.04533L22.428 10.9227L24 16.6933L22.428 21.8907Z"
@@ -355,13 +382,14 @@ export const MetaMaskIcon = () => (
   </svg>
 );
 
-export const WalletConnectIcon = () => (
+export const WalletConnectIcon = ({ size = 32, className = "" }) => (
   <svg
-    width="32"
-    height="32"
+    width={size}
+    height={size}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <g clipPath="url(#clip0_1484_6341)">
       <path
@@ -377,13 +405,14 @@ export const WalletConnectIcon = () => (
   </svg>
 );
 
-export const CoinbaseIcon = () => (
+export const CoinbaseIcon = ({ size = 32, className = "" }) => (
   <svg
-    width="32"
-    height="32"
+    width={size}
+    height={size}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M4 16C4 14.4241 4.31039 12.8637 4.91345 11.4078C5.5165 9.95189 6.40042 8.62902 7.51472 7.51472C8.62902 6.40042 9.95189 5.5165 11.4078 4.91345C12.8637 4.31039 14.4241 4 16 4C17.5759 4 19.1363 4.31039 20.5922 4.91345C22.0481 5.5165 23.371 6.40042 24.4853 7.51472C25.5996 8.62902 26.4835 9.95189 27.0866 11.4078C27.6896 12.8637 28 14.4241 28 16C28 19.1826 26.7357 22.2348 24.4853 24.4853C22.2348 26.7357 19.1826 28 16 28C12.8174 28 9.76515 26.7357 7.51472 24.4853C5.26428 22.2348 4 19.1826 4 16Z"
@@ -398,21 +427,28 @@ export const CoinbaseIcon = () => (
   </svg>
 );
 
-export const InfoIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+export const InfoIcon = ({ size = 20, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    className={className}
+  >
     <circle cx="10" cy="10" r="8.33" stroke="#AAB3D0" strokeWidth="1.5" />
     <path d="M10 10V6.67" stroke="#AAB3D0" strokeWidth="1.5" />
     <circle cx="10" cy="13.33" r="0.83" fill="#AAB3D0" />
   </svg>
 );
 
-export const CheckIcon = () => (
+export const CheckIcon = ({ size = 30, className = "" }) => (
   <svg
-    width="30"
-    height="30"
+    width={size}
+    height={size}
     viewBox="0 0 30 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       fillRule="evenodd"
@@ -423,8 +459,14 @@ export const CheckIcon = () => (
   </svg>
 );
 
-export const CloseIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+export const CloseIcon = ({ size = 16, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="none"
+    className={className}
+  >
     <path
       d="M4 4L12 12M12 4L4 12"
       stroke="#FFFFFF"
@@ -434,13 +476,14 @@ export const CloseIcon = () => (
   </svg>
 );
 
-export const TikIcon = () => (
+export const TikIcon = ({ size = 16, className = "" }) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <g clipPath="url(#clip0_3099_4375)">
       <path
@@ -466,13 +509,14 @@ export const TikIcon = () => (
   </svg>
 );
 
-export const EligibilityTikIcon = () => (
+export const EligibilityTikIcon = ({ size = 30, className = "" }) => (
   <svg
-    width="30"
-    height="30"
+    width={size}
+    height={size}
     viewBox="0 0 30 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
@@ -490,13 +534,15 @@ export const EligibilityTikIcon = () => (
     />
   </svg>
 );
-export const InfoIconGreen = () => (
+
+export const InfoIconGreen = ({ size = 51, className = "" }) => (
   <svg
-    width="51"
-    height="51"
+    width={size}
+    height={size}
     viewBox="0 0 51 51"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <g clipPath="url(#clip0_3669_6104)">
       <circle
@@ -544,13 +590,14 @@ export const InfoIconGreen = () => (
   </svg>
 );
 
-export const Notifications = () => (
+export const Notifications = ({ size = 24, className = "" }) => (
   <svg
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M5.81186 8.93778C5.81186 5.52036 8.58222 2.75 11.9996 2.75C15.417 2.75 18.1874 5.52036 18.1874 8.93777V13.5184L19.8 17.8572H4.19922L5.81186 13.5184V8.93778Z"
@@ -565,13 +612,14 @@ export const Notifications = () => (
   </svg>
 );
 
-export const WalletIcon = () => (
+export const WalletIcon = ({ size = 16, className = "" }) => (
   <svg
-    width="16"
-    height="16"
+    width={size}
+    height={size}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={className}
   >
     <path
       d="M12.6667 4.66667V2.66667C12.6667 2.48986 12.5964 2.32029 12.4714 2.19526C12.3464 2.07024 12.1768 2 12 2H3.33333C2.97971 2 2.64057 2.14048 2.39052 2.39052C2.14048 2.64057 2 2.97971 2 3.33333C2 3.68696 2.14048 4.02609 2.39052 4.27614C2.64057 4.52619 2.97971 4.66667 3.33333 4.66667H13.3333C13.5101 4.66667 13.6797 4.7369 13.8047 4.86193C13.9298 4.98695 14 5.15652 14 5.33333V8M14 8H12C11.6464 8 11.3072 8.14048 11.0572 8.39052C10.8071 8.64057 10.6667 8.97971 10.6667 9.33333C10.6667 9.68696 10.8071 10.0261 11.0572 10.2761C11.3072 10.5262 11.6464 10.6667 12 10.6667H14C14.1768 10.6667 14.3464 10.5964 14.4714 10.4714C14.5964 10.3464 14.6667 10.1768 14.6667 10V8.66667C14.6667 8.48986 14.5964 8.32029 14.4714 8.19526C14.3464 8.07024 14.1768 8 14 8Z"
