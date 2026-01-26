@@ -81,7 +81,9 @@ export default function StepperHorizontal({
 
           {/* Trail Line (not after last step) */}
           {index < steps.length - 1 && (
-            <div className="w-53 h-[3.17px] bg-white/10 mx-2 " />
+            <div
+              className={`w-50 h-[3.17px] mx-2 ${step.id <= currentStep - 1 ? "bg-[#0E966F]" : "bg-white/10"}`}
+            />
           )}
         </div>
       ))}
