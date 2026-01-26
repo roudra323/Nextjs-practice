@@ -5,3 +5,5 @@ export { default as ApplicationSuccessModal } from "./ApplicationSuccessModal";
 export { default as StakePoolModal } from "./StakePoolModal";
 export { default as CreateSharedNodeModal } from "./CreateSharedNodeModal";
 export { default as RequestPoolCreationModal } from "./RequestPoolCreationModal";
+export { default as NotificationPanel } from "./NotificationPanel";
+export type { Notification } from "./NotificationPanel";
