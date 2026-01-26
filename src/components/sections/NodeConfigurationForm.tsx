@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { nodeConfigSchema, type NodeConfigFormData } from "@/lib/validations";
 import { Code } from "lucide-react";
 import StepperHorizontal from "../validator/StepperHorizontal";
 import FormInput from "../validator/FormInput";
@@ -9,7 +12,7 @@ import ApplicationBanner from "../banners/ApplicationBanner";
 
 interface NodeConfigurationFormProps {
   onBack?: () => void;
-  onContinue?: () => void;
+  onContinue?: (data: NodeConfigFormData) => void;
 }
 
 type Platform = "windows" | "mac";
@@ -32,10 +35,24 @@ export default function NodeConfigurationForm({
   onContinue,
 }: NodeConfigurationFormProps) {
   const [platform, setPlatform] = useState<Platform>("windows");
-  const [publicKey, setPublicKey] = useState("");
-  const [withdrawalRoot, setWithdrawalRoot] = useState("");
-  const [signature, setSignature] = useState("");
-  const [depositRoot, setDepositRoot] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<NodeConfigFormData>({
+    resolver: zodResolver(nodeConfigSchema),
+    defaultValues: {
+      publicKey: "",
+      withdrawalRoot: "",
+      signature: "",
+      depositRoot: "",
+    },
+  });
+
+  const onSubmit = (data: NodeConfigFormData) => {
+    onContinue?.(data);
+  };
 
   return (
     <div className="flex flex-col w-full min-h-screen">
@@ -45,8 +62,11 @@ export default function NodeConfigurationForm({
       </div>
 
       {/* Main Form Container */}
-      <div className="flex justify-center px-6 pb-8 border border-red-500">
-        <div className="box-border w-full max-w-284 bg-white/5 border border-white/10 rounded-3xl p-6">
+      <div className="flex justify-center px-6 pb-8">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="box-border w-full max-w-284 bg-white/5 border border-white/10 rounded-3xl p-6"
+        >
           {/* Form Header */}
           <div className="mb-6">
             <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white mb-2">
@@ -72,6 +92,7 @@ export default function NodeConfigurationForm({
               {/* Platform Toggle */}
               <div className="flex items-center p-1 bg-[#0D0F17] border border-[#3A3A3A] rounded-xl">
                 <button
+                  type="button"
                   onClick={() => setPlatform("windows")}
                   className={`px-3 py-1.5 rounded-[10px] font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] transition-all ${
                     platform === "windows"
@@ -82,6 +103,7 @@ export default function NodeConfigurationForm({
                   Windows
                 </button>
                 <button
+                  type="button"
                   onClick={() => setPlatform("mac")}
                   className={`px-3 py-1.5 rounded-[10px] font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] transition-all ${
                     platform === "mac"
@@ -128,26 +150,30 @@ export default function NodeConfigurationForm({
               <FormInput
                 label="Public Key"
                 placeholder="0x..."
-                value={publicKey}
-                onChange={setPublicKey}
+                required
+                error={errors.publicKey}
+                {...register("publicKey")}
               />
               <FormInput
                 label="Withdrawal Root"
                 placeholder="0x..."
-                value={withdrawalRoot}
-                onChange={setWithdrawalRoot}
+                required
+                error={errors.withdrawalRoot}
+                {...register("withdrawalRoot")}
               />
               <FormInput
                 label="Signature"
                 placeholder="0x..."
-                value={signature}
-                onChange={setSignature}
+                required
+                error={errors.signature}
+                {...register("signature")}
               />
               <FormInput
                 label="Deposit Root"
                 placeholder="0x..."
-                value={depositRoot}
-                onChange={setDepositRoot}
+                required
+                error={errors.depositRoot}
+                {...register("depositRoot")}
               />
             </div>
           </div>
@@ -165,14 +191,13 @@ export default function NodeConfigurationForm({
 
             {/* Continue Button */}
             <button
-              type="button"
-              onClick={onContinue}
+              type="submit"
               className="flex items-center justify-center px-4.5 py-2 h-12 bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-base leading-6 tracking-[-0.3125px] text-white capitalize hover:bg-[#0C7D5D] transition-colors"
             >
               Verify Configuration
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

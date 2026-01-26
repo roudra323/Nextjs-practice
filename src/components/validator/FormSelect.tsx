@@ -14,6 +14,7 @@ interface FormSelectProps {
   onChange?: (value: string) => void;
   options?: Option[];
   required?: boolean;
+  error?: string;
 }
 
 export default function FormSelect({
@@ -23,6 +24,7 @@ export default function FormSelect({
   onChange,
   options = [],
   required = false,
+  error,
 }: FormSelectProps) {
   return (
     <div className="flex flex-col items-start gap-3.5 w-full">
@@ -36,7 +38,11 @@ export default function FormSelect({
         <select
           value={value}
           onChange={(e) => onChange?.(e.target.value)}
-          className="box-border appearance-none flex items-center px-5 py-3 w-full h-12 bg-white/5 border border-white/10 rounded-xl font-vietnam font-normal text-sm leading-4.5 tracking-[-0.15px] text-white focus:outline-none focus:border-white/20 transition-colors cursor-pointer"
+          className={`box-border appearance-none flex items-center px-5 py-3 w-full h-12 bg-white/5 border rounded-xl font-vietnam font-normal text-sm leading-4.5 tracking-[-0.15px] text-white focus:outline-none transition-colors cursor-pointer ${
+            error
+              ? "border-red-500 focus:border-red-500"
+              : "border-white/10 focus:border-white/20"
+          }`}
         >
           <option value="" disabled className="bg-[#0C0E19] text-white/40">
             {placeholder}
@@ -56,6 +62,10 @@ export default function FormSelect({
           <ChevronDown className="w-5 h-5 text-[#94A3B8]" strokeWidth={1.67} />
         </div>
       </div>
+      {/* Error Message */}
+      {error && (
+        <span className="font-vietnam text-sm text-red-500">{error}</span>
+      )}
     </div>
   );
 }

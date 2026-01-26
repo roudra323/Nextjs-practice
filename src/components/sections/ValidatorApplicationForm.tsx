@@ -1,5 +1,8 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { validatorFormSchema, type ValidatorFormData } from "@/lib/validations";
 import { useState } from "react";
 import {
   Server,
@@ -17,7 +20,7 @@ import ApplicationBanner from "../banners/ApplicationBanner";
 
 interface ValidatorApplicationFormProps {
   onBack?: () => void;
-  onContinue?: () => void;
+  onContinue?: (data: ValidatorFormData) => void;
 }
 
 const technicalRequirements = [
@@ -59,9 +62,31 @@ export default function ValidatorApplicationForm({
   onBack,
   onContinue,
 }: ValidatorApplicationFormProps) {
-  const [validatorName, setValidatorName] = useState("");
-  const [country, setCountry] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [country, setCountry] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm<ValidatorFormData>({
+    resolver: zodResolver(validatorFormSchema),
+    defaultValues: {
+      validatorName: "",
+      country: "",
+    },
+  });
+
+  const handleCountryChange = (value: string) => {
+    setCountry(value);
+    setValue("country", value);
+  };
+
+  const onSubmit = (data: ValidatorFormData) => {
+    if (!termsAccepted) return;
+    onContinue?.(data);
+  };
 
   return (
     <div className="flex flex-col w-full min-h-screen">
@@ -72,7 +97,10 @@ export default function ValidatorApplicationForm({
 
       {/* Main Form Container */}
       <div className="flex justify-center px-6 pb-8">
-        <div className="box-border w-full max-w-284 bg-white/5 border border-white/10 rounded-3xl p-6">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="box-border w-full max-w-284 bg-white/5 border border-white/10 rounded-3xl p-6"
+        >
           {/* Form Header */}
           <div className="mb-6">
             <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white mb-2">
@@ -90,16 +118,18 @@ export default function ValidatorApplicationForm({
             <FormInput
               label="Validator Name"
               placeholder="e.g. Krown"
-              value={validatorName}
-              onChange={setValidatorName}
+              required
+              error={errors.validatorName}
+              {...register("validatorName")}
             />
             {/* Country */}
             <FormSelect
               label="Country"
               placeholder="Select Country"
               value={country}
-              onChange={setCountry}
+              onChange={handleCountryChange}
               options={countries}
+              error={errors.country?.message}
             />
           </div>
 
@@ -190,15 +220,14 @@ export default function ValidatorApplicationForm({
 
             {/* Continue Button */}
             <button
-              type="button"
-              onClick={onContinue}
+              type="submit"
               disabled={!termsAccepted}
               className="flex items-center justify-center px-4.5 py-2 h-12 bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-base leading-6 tracking-[-0.3125px] text-white capitalize hover:bg-[#0C7D5D] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Continue to node setup
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
