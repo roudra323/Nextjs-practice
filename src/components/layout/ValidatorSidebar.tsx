@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ContactFormPanel } from "../modals";
 
 const menuItems = [
   {
@@ -170,6 +172,16 @@ export default function ValidatorSidebar({
   onClose,
 }: ValidatorSidebarProps) {
   const pathname = usePathname();
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const handleMenuClick = (item: (typeof menuItems)[0]) => {
+    if (item.name === "Contact us") {
+      setIsContactOpen(true);
+      onClose?.();
+      return true; // Prevent navigation
+    }
+    return false;
+  };
 
   return (
     <>
@@ -190,6 +202,29 @@ export default function ValidatorSidebar({
         <nav className="flex flex-col gap-1 p-4 lg:p-6">
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
+            const isContactItem = item.name === "Contact us";
+
+            if (isContactItem) {
+              return (
+                <button
+                  key={item.name}
+                  onClick={() => handleMenuClick(item)}
+                  className={`flex items-center gap-2.5 px-3.5 py-3.5 rounded-[14px] transition-colors font-vietnam font-medium text-base leading-5 text-left ${
+                    isContactOpen
+                      ? "bg-[#131839] text-white"
+                      : "text-[#AAB3D0] hover:bg-[#131839]/50 hover:text-white"
+                  }`}
+                >
+                  <span
+                    className={isContactOpen ? "text-white" : "text-[#AAB3D0]"}
+                  >
+                    {item.icon}
+                  </span>
+                  {item.name}
+                </button>
+              );
+            }
+
             return (
               <Link
                 key={item.name}
@@ -210,6 +245,12 @@ export default function ValidatorSidebar({
           })}
         </nav>
       </aside>
+
+      {/* Contact Form Panel */}
+      <ContactFormPanel
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
     </>
   );
 }

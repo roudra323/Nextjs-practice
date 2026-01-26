@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ValidatorSidebar, ValidatorNavbar } from "@/components";
 
-export default function ValidatorPortalLayout({
+export default function SharedPoolsLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ export default function ValidatorPortalLayout({
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
       />
-      <main className="lg:ml-63.75 pt-14 sm:pt-16 transition-all duration-300">
+      <main className="lg:ml-[255px] pt-14 sm:pt-16 transition-all duration-300">
         {children}
       </main>
     </div>

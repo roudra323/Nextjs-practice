@@ -1,14 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import { EligibilityCheckModal } from "@/components/modals";
+import {
+  EligibilityCheckModal,
+  ApplicationSuccessModal,
+} from "@/components/modals";
 import {
   HowItWorks,
   ValidatorSelection,
   ValidatorApplicationForm,
+  NodeConfigurationForm,
+  DepositStakeForm,
+  GoLiveForm,
+  ManagedValidatorApplicationForm,
 } from "@/components/sections";
 
-type PageView = "select" | "how-it-works" | "application-form";
+type PageView =
+  | "select"
+  | "how-it-works"
+  | "application-form"
+  | "managed-application"
+  | "node-setup"
+  | "deposit-stake"
+  | "go-live";
 
 // Mock eligibility data
 const eligibilityData = [
@@ -41,11 +55,16 @@ const eligibilityData = [
 export default function BecomeValidatorPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentView, setCurrentView] = useState<PageView>("select");
+  const [selectedValidatorType, setSelectedValidatorType] = useState<
+    string | null
+  >(null);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
   const handleApply = (type: string) => {
     console.log(`Applying as ${type} validator`);
+    setSelectedValidatorType(type);
 
-    if (type === "Self-Hosted") {
+    if (type === "Self-Hosted" || type === "Managed") {
       setIsModalOpen(true);
     } else {
       console.log(`Opening application for ${type}`);
@@ -54,7 +73,25 @@ export default function BecomeValidatorPage() {
 
   const handleContinue = () => {
     setIsModalOpen(false);
-    setCurrentView("how-it-works");
+    if (selectedValidatorType === "Managed") {
+      setCurrentView("managed-application");
+    } else {
+      setCurrentView("how-it-works");
+    }
+  };
+
+  const handleBackFromManagedApplication = () => {
+    setCurrentView("select");
+  };
+
+  const handleManagedApply = () => {
+    console.log("Managed validator application submitted");
+    setIsSuccessModalOpen(true);
+  };
+
+  const handleSuccessGoToDashboard = () => {
+    setIsSuccessModalOpen(false);
+    window.location.href = "/dashboard";
   };
 
   const handleStartOnboarding = () => {
@@ -68,7 +105,35 @@ export default function BecomeValidatorPage() {
 
   const handleContinueToNodeSetup = () => {
     console.log("Continuing to node setup...");
-    // Add navigation to next step
+    setCurrentView("node-setup");
+  };
+
+  const handleBackFromNodeSetup = () => {
+    setCurrentView("application-form");
+  };
+
+  const handleVerifyConfiguration = () => {
+    console.log("Verifying configuration...");
+    setCurrentView("deposit-stake");
+  };
+
+  const handleBackFromDeposit = () => {
+    setCurrentView("node-setup");
+  };
+
+  const handleConfirmDeposit = () => {
+    console.log("Confirming deposit...");
+    setCurrentView("go-live");
+  };
+
+  const handleBackFromGoLive = () => {
+    setCurrentView("deposit-stake");
+  };
+
+  const handleGoToDashboard = () => {
+    console.log("Navigating to dashboard...");
+    // Navigate to dashboard
+    window.location.href = "/dashboard";
   };
 
   return (
@@ -85,6 +150,30 @@ export default function BecomeValidatorPage() {
           onContinue={handleContinueToNodeSetup}
         />
       )}
+      {currentView === "node-setup" && (
+        <NodeConfigurationForm
+          onBack={handleBackFromNodeSetup}
+          onContinue={handleVerifyConfiguration}
+        />
+      )}
+      {currentView === "deposit-stake" && (
+        <DepositStakeForm
+          onBack={handleBackFromDeposit}
+          onConfirm={handleConfirmDeposit}
+        />
+      )}
+      {currentView === "go-live" && (
+        <GoLiveForm
+          onBack={handleBackFromGoLive}
+          onGoToDashboard={handleGoToDashboard}
+        />
+      )}
+      {currentView === "managed-application" && (
+        <ManagedValidatorApplicationForm
+          onBack={handleBackFromManagedApplication}
+          onApply={handleManagedApply}
+        />
+      )}
 
       <EligibilityCheckModal
         isOpen={isModalOpen}
@@ -92,6 +181,12 @@ export default function BecomeValidatorPage() {
         onContinue={handleContinue}
         walletAddress="0x742d...9c4a"
         eligibilityData={eligibilityData}
+      />
+
+      <ApplicationSuccessModal
+        isOpen={isSuccessModalOpen}
+        onClose={() => setIsSuccessModalOpen(false)}
+        onGoToDashboard={handleSuccessGoToDashboard}
       />
     </div>
   );

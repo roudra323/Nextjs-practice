@@ -7,3 +7,4 @@ export { default as StepperHorizontal } from "./StepperHorizontal";
 export { default as FormInput } from "./FormInput";
 export { default as FormSelect } from "./FormSelect";
 export { default as FileUploader } from "./FileUploader";
+export { default as CodeBlock } from "./CodeBlock";
