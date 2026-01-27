@@ -42,13 +42,13 @@ export default function StepperHorizontal({
   steps = defaultSteps,
 }: StepperHorizontalProps) {
   return (
-    <div className="flex-row hidden sm:flex justify-center items-start gap-3">
+    <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-4 md:gap-3 w-full px-4 md:px-0">
       {steps.map((step, index) => (
-        <div key={step.id} className="flex items-center">
+        <div key={step.id} className="flex flex-col md:flex-row items-center">
           {/* Step Item */}
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-2 md:gap-3">
             <span
-              className={`font-vietnam font-medium text-base leading-5 text-center whitespace-nowrap ${
+              className={`font-vietnam font-medium text-sm md:text-base leading-5 text-center whitespace-nowrap ${
                 step.id <= currentStep ? "text-white" : "text-[#AAB3D0]"
               }`}
             >
@@ -56,7 +56,7 @@ export default function StepperHorizontal({
             </span>
             {/* Step Circle */}
             <div
-              className={`w-[50.76px] h-[50.76px] rounded-full flex items-center justify-center ${
+              className={`w-10 h-10 md:w-[50.76px] md:h-[50.76px] rounded-full flex items-center justify-center ${
                 step.id <= currentStep
                   ? "bg-linear-to-br from-[#00C48C] to-[#0E966F] shadow-[0px_4px_20px_rgba(0,196,140,0.41)]"
                   : "bg-white/5 border-[1.5px] border-white/10"
@@ -72,7 +72,7 @@ export default function StepperHorizontal({
             </div>
             {/* Step Label */}
             <span
-              className={`font-vietnam font-medium text-base leading-5 text-center whitespace-nowrap ${
+              className={`font-vietnam font-medium text-sm md:text-base leading-5 text-center whitespace-nowrap ${
                 step.id <= currentStep ? "text-white" : "text-[#AAB3D0]"
               }`}
             >
@@ -82,9 +82,20 @@ export default function StepperHorizontal({
 
           {/* Trail Line (not after last step) */}
           {index < steps.length - 1 && (
-            <div
-              className={`w-50 h-[3.17px] mx-2 ${step.id <= currentStep - 1 ? "bg-[#0E966F]" : "bg-white/10"}`}
-            />
+            <>
+              {/* Vertical connector (mobile) */}
+              <div
+                className={`md:hidden w-[3.17px] h-6 my-2 ${
+                  step.id <= currentStep - 1 ? "bg-[#0E966F]" : "bg-white/10"
+                }`}
+              />
+              {/* Horizontal connector (md+) */}
+              <div
+                className={`hidden md:block w-12 lg:w-24 xl:w-50 h-[3.17px] mx-2 ${
+                  step.id <= currentStep - 1 ? "bg-[#0E966F]" : "bg-white/10"
+                }`}
+              />
+            </>
           )}
         </div>
       ))}

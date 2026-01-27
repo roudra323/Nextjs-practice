@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Calendar, CheckCircle } from "lucide-react";
+import { X, Calendar } from "lucide-react";
 import { UnbondingEndIcon } from "../icons";
 
 interface UnstakeDetailsModalProps {
@@ -28,11 +28,11 @@ export default function UnstakeDetailsModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="relative flex flex-col items-start p-[1px] w-full max-w-[712px] bg-[#0B0E17] border border-white/10 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-3xl">
+      <div className="relative flex flex-col items-start p-px w-full max-w-178 bg-[#0B0E17] border border-white/10 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-3xl">
         {/* Inner Card */}
         <div className="relative flex flex-col items-start p-6 pb-4 gap-4 w-full bg-[#0C0F18] border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden">
           {/* Background Blur Effect */}
-          <div className="absolute w-[486.25px] h-[376.09px] -left-[154px] -top-[127px] bg-white mix-blend-overlay blur-[61.2187px] rotate-[30deg] z-0" />
+          <div className="absolute w-[486.25px] h-[376.09px] -left-38.5 -top-31.75 bg-white mix-blend-overlay blur-[61.2187px] rotate-30 z-0" />
 
           {/* Header */}
           <div className="relative z-10 flex items-center justify-between w-full">

@@ -33,7 +33,7 @@ export default function NodePerformanceOverview() {
           {/* Admin Panel */}
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-[#34394D] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl">
-              <span className="font-grotesk font-bold text-sm sm:text-[15px] leading-[19px] text-white">
+              <span className="font-grotesk font-bold text-sm sm:text-[15px] leading-4.75 text-white">
                 KF
               </span>
             </div>
@@ -48,7 +48,7 @@ export default function NodePerformanceOverview() {
           </div>
 
           {/* Description */}
-          <p className="font-vietnam font-normal text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0] max-w-[582px]">
+          <p className="font-vietnam font-normal text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0] max-w-145.5">
             High-performance validator built for the Monad community,
             reinvesting into open data.
           </p>

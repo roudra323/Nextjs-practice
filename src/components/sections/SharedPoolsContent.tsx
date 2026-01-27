@@ -20,16 +20,18 @@ interface StatCardProps {
 
 function StatCard({ label, value, icon, iconColor }: StatCardProps) {
   return (
-    <div className="box-border w-52 h-[101px] bg-white/5 border border-white/10 rounded-2xl p-4 relative">
-      <span className="font-vietnam font-medium text-sm leading-[19px] text-[#AAB3D0]">
+    <div className="box-border flex-1 min-w-35 sm:min-w-45 sm:max-w-52 h-22.5 sm:h-25.25 bg-white/5 border border-white/10 rounded-2xl p-3 sm:p-4 relative">
+      <span className="font-vietnam font-medium text-xs sm:text-sm leading-4.75 text-[#AAB3D0]">
         {label}
       </span>
-      <div className="mt-5">
-        <span className="font-grotesk font-medium text-lg leading-[31px] text-white">
+      <div className="mt-3 sm:mt-5">
+        <span className="font-grotesk font-medium text-base sm:text-lg leading-7.75 text-white">
           {value}
         </span>
       </div>
-      <div className={`absolute right-4 bottom-5 w-5 h-5 ${iconColor}`}>
+      <div
+        className={`absolute right-3 sm:right-4 bottom-3 sm:bottom-5 w-4 h-4 sm:w-5 sm:h-5 ${iconColor}`}
+      >
         {icon}
       </div>
     </div>
@@ -57,13 +59,12 @@ interface SharedPoolCardProps {
 
 function SharedPoolCard({ pool, onViewAndJoin }: SharedPoolCardProps) {
   return (
-    <div className="box-border w-full bg-white/5 border border-white/10 rounded-3xl">
+    <div className="box-border w-full bg-white/5 border border-white/10 rounded-2xl sm:rounded-3xl">
       {/* Header */}
-
-      <div className="flex items-center justify-between p-4 border-b border-white/10">
-        <div className="felx flex-col">
-          <div className="flex items-center gap-3">
-            <h3 className="font-vietnam font-medium text-lg leading-7 tracking-[-0.44px] text-white">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 gap-3 sm:gap-0 border-b border-white/10">
+        <div className="flex flex-col">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <h3 className="font-vietnam font-medium text-base sm:text-lg leading-7 tracking-[-0.44px] text-white">
               {pool.name}
             </h3>
             {pool.status === "active" && (
@@ -75,83 +76,82 @@ function SharedPoolCard({ pool, onViewAndJoin }: SharedPoolCardProps) {
             )}
           </div>
           {/* Pool Manager */}
-
-          <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.44px] text-[#AAB3D0]">
+          <span className="font-vietnam font-medium text-xs sm:text-sm leading-6 tracking-[-0.44px] text-[#AAB3D0]">
             Pool Manager: {pool.manager}
           </span>
         </div>
 
         <button
           onClick={() => onViewAndJoin(pool.id)}
-          className="flex items-center justify-center gap-1.5 px-4.5 py-2 h-9 bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-white hover:bg-[#0C7D5D] transition-colors cursor-pointer"
+          className="flex items-center justify-center gap-1.5 px-3 sm:px-4.5 py-2 h-9 w-full sm:w-auto bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-white hover:bg-[#0C7D5D] transition-colors cursor-pointer"
         >
           View And Join
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
 
-      {/* Stats Row */}
-      <div className="flex items-start gap-8 px-5 py-4">
+      {/* Stats Row - Grid layout for responsiveness */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 px-3 sm:px-5 py-3 sm:py-4">
         {/* Uptime */}
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-1 sm:gap-1.5">
           <span className="font-vietnam font-medium text-xs leading-4 text-[#94A3B8]">
             Uptime
           </span>
           <div className="flex items-center gap-1.5">
             <CheckCircle
-              className="w-3.5 h-3.5 text-[#00C48C]"
+              className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#00C48C]"
               strokeWidth={1.17}
             />
-            <span className="font-grotesk font-medium text-base leading-5 tracking-[-0.3125px] text-white">
+            <span className="font-grotesk font-medium text-sm sm:text-base leading-5 tracking-[-0.3125px] text-white">
               {pool.uptime}
             </span>
           </div>
         </div>
 
         {/* Total Staked */}
-        <div className="flex flex-col gap-1.5 ml-32">
+        <div className="flex flex-col gap-1 sm:gap-1.5">
           <span className="font-vietnam font-medium text-xs leading-4 text-[#94A3B8]">
             Total Staked
           </span>
-          <span className="font-grotesk font-medium text-base leading-5 tracking-[-0.3125px] text-white">
+          <span className="font-grotesk font-medium text-sm sm:text-base leading-5 tracking-[-0.3125px] text-white">
             {pool.totalStaked}
           </span>
         </div>
 
         {/* Available Capacity */}
-        <div className="flex flex-col gap-1.5 ml-32">
+        <div className="flex flex-col gap-1 sm:gap-1.5">
           <span className="font-vietnam font-medium text-xs leading-4 text-[#94A3B8]">
             Available Capacity
           </span>
-          <span className="font-grotesk font-medium text-base leading-5 tracking-[-0.3125px] text-white">
+          <span className="font-grotesk font-medium text-sm sm:text-base leading-5 tracking-[-0.3125px] text-white">
             {pool.availableCapacity}
           </span>
         </div>
 
         {/* Total Fees */}
-        <div className="flex flex-col gap-1.5 ml-32">
+        <div className="flex flex-col gap-1 sm:gap-1.5">
           <span className="font-vietnam font-medium text-xs leading-4 text-[#94A3B8]">
             Total Fees
           </span>
           <div className="flex flex-col gap-0.5">
             <div className="flex items-center gap-1.5">
-              <span className="font-grotesk font-medium text-base leading-5 tracking-[-0.3125px] text-white">
+              <span className="font-grotesk font-medium text-sm sm:text-base leading-5 tracking-[-0.3125px] text-white">
                 {pool.totalFees}
               </span>
               <Info className="w-3 h-3 text-[#94A3B8]" />
             </div>
-            <span className="font-vietnam font-normal text-xs leading-[15px] tracking-[0.12px] text-[#94A3B8]">
+            <span className="font-vietnam font-normal text-[10px] sm:text-xs leading-3.75 tracking-[0.12px] text-[#94A3B8]">
               {pool.feeBreakdown}
             </span>
           </div>
         </div>
 
         {/* APR */}
-        <div className="flex flex-col gap-1.5 ml-32">
+        <div className="flex flex-col gap-1 sm:gap-1.5">
           <span className="font-vietnam font-medium text-xs leading-4 text-[#94A3B8]">
             APR
           </span>
-          <span className="font-grotesk font-medium text-base leading-5 tracking-[-0.3125px] text-white">
+          <span className="font-grotesk font-medium text-sm sm:text-base leading-5 tracking-[-0.3125px] text-white">
             {pool.apr}
           </span>
         </div>
@@ -173,30 +173,36 @@ function SharedPoolHowItWorks() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-white/5 border border-white/10 rounded-[20px] p-6">
-      <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.3125px] text-white mb-3">
+    <div className="flex flex-col w-full bg-white/5 border border-white/10 rounded-4xl p-4 sm:p-6">
+      <h2 className="font-vietnam font-medium text-lg sm:text-xl leading-6 tracking-[-0.3125px] text-white mb-3">
         How it works
       </h2>
 
-      <div className="flex items-start justify-center gap-3 mb-3">
+      {/* Mobile: Vertical layout, MD+: Horizontal layout */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-3 mb-3">
         {steps.map((step, index) => (
-          <div key={index} className="flex items-center">
+          <div key={index} className="flex flex-col md:flex-row items-center">
             {/* Step */}
-            <div className="flex flex-col max-w-20 items-center">
-              <span className="font-vietnam font-medium text-base leading-5 text-white/25 mb-4">
+            <div className="flex flex-col items-center max-w-35 md:max-w-none">
+              <span className="font-vietnam font-medium text-sm sm:text-base leading-5 text-white/25 mb-3 md:mb-4">
                 {step.stepNumber}
               </span>
-              <div className="w-[50.76px] h-[50.76px] bg-[#0E966F] text-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-[50.76px] sm:h-[50.76px] bg-[#0E966F] text-white rounded-full flex items-center justify-center">
                 {step.icon}
               </div>
-              <span className="font-vietnam font-medium text-base leading-5 text-white text-center mt-4 whitespace-nowrap">
+              <span className="font-vietnam font-medium text-sm sm:text-base leading-5 text-white text-center mt-3 md:mt-4 md:whitespace-nowrap">
                 {step.label}
               </span>
             </div>
 
-            {/* Connector */}
+            {/* Connector - Vertical on mobile, Horizontal on md+ */}
             {index < steps.length - 1 && (
-              <div className="w-[212px] h-[3.17px] bg-white/10 left-full" />
+              <>
+                {/* Vertical connector (mobile) */}
+                <div className="md:hidden w-[3.17px] h-8 bg-white/10 my-2" />
+                {/* Horizontal connector (md+) */}
+                <div className="hidden md:block w-16 lg:w-24 xl:w-53 h-[3.17px] bg-white/10 mx-2" />
+              </>
             )}
           </div>
         ))}
@@ -292,9 +298,9 @@ export default function SharedPoolsContent({
   };
 
   return (
-    <div className="flex flex-col gap-6 p-6 w-full">
+    <div className="flex flex-col gap-4 sm:gap-6 p-4 sm:p-6 w-full">
       {/* Stats Row */}
-      <div className="flex items-center gap-6">
+      <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-6">
         {statsData.map((stat, index) => (
           <StatCard
             key={index}
@@ -312,12 +318,12 @@ export default function SharedPoolsContent({
       {/* Pools Header */}
       <div className="flex">
         <div className="flex items-center justify-between w-full">
-          <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white">
+          <h2 className="font-vietnam font-medium text-lg sm:text-xl leading-6 tracking-[-0.15px] text-white">
             Shared Pools
           </h2>
-          <button className="box-border flex items-center justify-center gap-1.5 px-2 py-3 h-9 bg-[#242630] border border-white/10 rounded-xl">
+          <button className="box-border flex items-center justify-center gap-1.5 px-2 py-2 sm:py-3 h-8 sm:h-9 bg-[#242630] border border-white/10 rounded-xl">
             <svg
-              className="w-3.5 h-3.5 text-[#AAB3D0]"
+              className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#AAB3D0]"
               viewBox="0 0 14 14"
               fill="none"
               stroke="currentColor"
@@ -325,7 +331,7 @@ export default function SharedPoolsContent({
             >
               <path d="M1 3h12M3 7h8M5 11h4" />
             </svg>
-            <span className="font-vietnam font-normal text-sm leading-[150%] text-[#AAB3D0]">
+            <span className="font-vietnam font-normal text-xs sm:text-sm leading-[150%] text-[#AAB3D0]">
               Filter
             </span>
           </button>

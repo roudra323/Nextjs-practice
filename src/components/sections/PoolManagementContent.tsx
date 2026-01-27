@@ -23,7 +23,7 @@ interface RequirementCardProps {
 
 function RequirementCard({ icon, title, value }: RequirementCardProps) {
   return (
-    <div className="box-border w-full sm:w-[188px] h-auto sm:h-[102px] items-start justify-center flex flex-col  bg-white/5 border border-white/10 rounded-2xl p-4 relative">
+    <div className="box-border w-full sm:w-47 h-auto sm:h-25.5 items-start justify-center flex flex-col  bg-white/5 border border-white/10 rounded-2xl p-4 relative">
       <div className="text-[#00C48C]">{icon}</div>
       <div className="mt-3">
         <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.3125px] text-white">
@@ -47,12 +47,12 @@ interface StatCardProps {
 
 function StatCard({ label, value, icon, iconColor }: StatCardProps) {
   return (
-    <div className="flex flex-col w-full sm:w-52 h-auto sm:h-[101px] bg-white/5 border border-white/10 rounded-2xl p-4">
-      <span className="font-vietnam font-medium text-sm leading-[19px] text-[#AAB3D0]">
+    <div className="flex flex-col w-full sm:w-52 h-auto sm:h-25.25 bg-white/5 border border-white/10 rounded-2xl p-4">
+      <span className="font-vietnam font-medium text-sm leading-4.75 text-[#AAB3D0]">
         {label}
       </span>
       <div className="flex flex-row mt-3 sm:mt-5 justify-between items-center">
-        <span className="font-grotesk font-medium text-base sm:text-lg leading-[31px] text-white">
+        <span className="font-grotesk font-medium text-base sm:text-lg leading-7.75 text-white">
           {value}
         </span>
         <div className={`w-5 h-5 ${iconColor}`}>{icon}</div>
@@ -89,7 +89,7 @@ function PoolDetailsCard({ pool, onCreateSharedNode }: PoolDetailsCardProps) {
         </div>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
           <div className="flex items-center gap-1.5">
-            <span className="font-vietnam font-normal text-xs sm:text-[13px] leading-[19px] text-[#00C48C]">
+            <span className="font-vietnam font-normal text-xs sm:text-[13px] leading-4.75 text-[#00C48C]">
               All requirements are met
             </span>
             <CheckCircle className="w-4 h-4 text-[#00C48C]" strokeWidth={1.5} />
@@ -283,15 +283,15 @@ export default function PoolManagementContent({
   return (
     <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 w-full">
       {/* Banner Section */}
-      <div className="box-border w-full bg-white/5 border border-white/10 rounded-[20px] p-4 sm:p-5 relative overflow-hidden">
+      <div className="box-border w-full bg-white/5 border border-white/10 rounded-4xl p-4 sm:p-5 relative overflow-hidden">
         {/* Background Blur Effect */}
-        <div className="absolute w-[272.59px] h-[210.83px] -left-[117px] -top-[159px] bg-white mix-blend-overlay blur-[61.2187px] rotate-[30deg]" />
+        <div className="absolute w-[272.59px] h-[210.83px] -left-29.25 -top-39.75 bg-white mix-blend-overlay blur-[61.2187px] rotate-30" />
 
         {/* Header Row */}
         <div className="relative z-10 flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4 sm:mb-6">
           <div className="flex items-start gap-3 sm:gap-4">
             {/* Shield Icon */}
-            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00C48C] to-[#0E966F] border border-white/10 shadow-[0px_4px_20px_rgba(0,196,140,0.41)] rounded-xl">
+            <div className="shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-linear-to-br from-[#00C48C] to-[#0E966F] border border-white/10 shadow-[0px_4px_20px_rgba(0,196,140,0.41)] rounded-xl">
               <ShieldFilledIcon />
             </div>
             <div>
@@ -309,7 +309,7 @@ export default function PoolManagementContent({
             className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-1 h-8 bg-[#0E966F] rounded-xl font-vietnam font-medium text-xs sm:text-sm leading-6 tracking-[-0.3125px] text-white hover:bg-[#0C7D5D] transition-colors cursor-pointer whitespace-nowrap"
           >
             Create Pool
-            <ArrowRight className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+            <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
           </button>
         </div>
 

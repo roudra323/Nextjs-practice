@@ -56,7 +56,7 @@ export default function EligibilityCheckModal({
         {/* Content */}
         <div className="relative z-10">
           {/* Header */}
-          <h2 className="font-vietnam font-semibold text-lg leading-[18px] tracking-[-0.44px] text-white mb-2">
+          <h2 className="font-vietnam font-semibold text-lg leading-4.5 tracking-[-0.44px] text-white mb-2">
             Validator Eligibility
           </h2>
           <p className="font-vietnam font-normal text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0] mb-6">
@@ -69,7 +69,7 @@ export default function EligibilityCheckModal({
             {eligibilityData.map((item) => (
               <div
                 key={item.number}
-                className="flex items-start gap-4 p-4 pt-4 pb-0 bg-white/5 border border-white/10 rounded-2xl min-h-[96px]"
+                className="flex items-start gap-4 p-4 pt-4 pb-0 bg-white/5 border border-white/10 rounded-2xl min-h-24"
               >
                 {/* Number Badge */}
                 <div className="box-border flex flex-row justify-center items-center px-4.5 py-2 gap-1.5 w-10 h-10 bg-[#34394D] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl shrink-0">
@@ -79,14 +79,14 @@ export default function EligibilityCheckModal({
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col gap-1 flex-grow pb-4">
+                <div className="flex flex-col gap-1 grow pb-4">
                   {/* Title and Status Icon */}
                   <div className="flex items-center justify-between">
                     <h3 className="font-vietnam font-medium text-base leading-6 tracking-[-0.31px] text-white">
                       {item.title}
                     </h3>
                     {/* Success Icon */}
-                    <div className="w-[30px] h-[30px] flex items-center justify-center flex-shrink-0">
+                    <div className="w-7.5 h-7.5 flex items-center justify-center shrink-0">
                       <EligibilityTikIcon />
                     </div>
                   </div>
@@ -109,7 +109,7 @@ export default function EligibilityCheckModal({
             </button>
             <button
               onClick={onContinue}
-              className="flex items-center justify-center px-[18px] py-2 h-12 bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-base leading-6 tracking-[-0.31px] text-white hover:bg-[#0C7D5D] transition-colors"
+              className="flex items-center justify-center px-4.5 py-2 h-12 bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-base leading-6 tracking-[-0.31px] text-white hover:bg-[#0C7D5D] transition-colors"
             >
               Continue to Application
             </button>

@@ -68,6 +68,7 @@ export default function BecomeValidatorPage() {
       setIsModalOpen(true);
     } else {
       console.log(`Opening application for ${type}`);
+      window.location.href = "/shared-pools";
     }
   };
 

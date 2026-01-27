@@ -150,7 +150,7 @@ export default function ActiveStakes() {
           </h2>
 
           {/* Search Input */}
-          <div className="relative w-full sm:w-[278px]">
+          <div className="relative w-full sm:w-69.5">
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgba(170,179,208,0.4)]">
               <Search size={16} />
             </div>
@@ -166,7 +166,7 @@ export default function ActiveStakes() {
 
         {/* Table */}
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[700px]">
+          <table className="w-full min-w-175">
             <thead>
               <tr className="border-b border-[rgba(255,255,255,0.1)]">
                 <th className="text-left py-2.5 px-2 font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">

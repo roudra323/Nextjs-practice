@@ -16,7 +16,7 @@ export default function MetricCard({
   return (
     <div className="flex flex-col p-4 w-full h-auto justify-between items-center sm:items-start bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl">
       <div className="flex flex-col sm:flex-row items-center justify-between w-full">
-        <span className="font-vietnam font-medium text-sm leading-[19px] text-[#AAB3D0]">
+        <span className="font-vietnam font-medium text-sm leading-4.75 text-[#AAB3D0]">
           {label}
         </span>
         {showChange && (
@@ -28,7 +28,7 @@ export default function MetricCard({
           </div>
         )}
       </div>
-      <span className="font-grotesk font-medium text-lg leading-[31px] text-white mt-2.5">
+      <span className="font-grotesk font-medium text-lg leading-7.75 text-white mt-2.5">
         {value}
       </span>
     </div>

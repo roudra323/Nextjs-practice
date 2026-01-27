@@ -31,7 +31,7 @@ export default function StakeSuccessToast({
 
   return (
     <div className="fixed top-6 right-6 z-100 animate-slide-in-right">
-      <div className="flex items-start gap-2.5 w-94 h-[87px] p-[17px_17px_14px_17px] bg-[#0B0E17] border border-[rgba(255,255,255,0.1)] rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.3)]">
+      <div className="flex items-start gap-2.5 w-94 h-21.75 p-[17px_17px_14px_17px] bg-[#0B0E17] border border-[rgba(255,255,255,0.1)] rounded-xl shadow-[0px_10px_25px_rgba(0,0,0,0.3)]">
         {/* Success Icon */}
         <div className="shrink-0">
           <div className="w-5 h-5 flex items-center justify-center bg-[#0E966F] rounded-full">

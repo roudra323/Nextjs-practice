@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { X, AlertCircle, ChevronUp, ChevronDown } from "lucide-react";
-import { InfoIcon, WarningIcon } from "../icons";
+import { X, ChevronUp, ChevronDown } from "lucide-react";
+import { WarningIcon } from "../icons";
 
 interface StakeRecord {
   id: string;
@@ -56,14 +56,14 @@ export default function UnstakeModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="relative w-full max-w-[448px] bg-[#0B0E17] border border-white/10 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden">
+      <div className="relative w-full max-w-md bg-[#0B0E17] border border-white/10 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden">
         {/* Background Blur Effect */}
-        <div className="absolute w-[486.25px] h-[376.09px] -left-[144.35px] -top-[156.04px] bg-white mix-blend-overlay blur-[61.2187px] rotate-[30deg]" />
+        <div className="absolute w-[486.25px] h-[376.09px] -left-[144.35px] -top-[156.04px] bg-white mix-blend-overlay blur-[61.2187px] rotate-30" />
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-[17px] right-[17px] w-4 h-4 opacity-70 hover:opacity-100 transition-opacity cursor-pointer z-20"
+          className="absolute top-4.25 right-4.25 w-4 h-4 opacity-70 hover:opacity-100 transition-opacity cursor-pointer z-20"
           aria-label="Close"
         >
           <X className="w-4 h-4 text-white" strokeWidth={1.33} />
@@ -71,7 +71,7 @@ export default function UnstakeModal({
 
         {/* Header */}
         <div className="relative z-10 flex flex-col gap-2 px-6 pt-6">
-          <h2 className="font-inter font-semibold text-lg leading-[18px] tracking-[-0.44px] text-white">
+          <h2 className="font-inter font-semibold text-lg leading-4.5 tracking-[-0.44px] text-white">
             Unstake KROWN
           </h2>
           <p className="font-inter font-normal text-sm leading-5 tracking-[-0.15px] text-[#94A3B8]">
@@ -106,12 +106,12 @@ export default function UnstakeModal({
                 onChange={(e) =>
                   setUnstakeAmount(e.target.value.replace(/[^0-9.]/g, ""))
                 }
-                className="box-border w-full h-[50px] px-4 py-3 bg-[#0D0F17] border border-[#49405D] rounded-2xl font-grotesk font-normal text-base leading-5 tracking-[-0.3125px] text-white/50 focus:outline-none focus:border-[#0E966F] focus:text-white"
+                className="box-border w-full h-12.5 px-4 py-3 bg-[#0D0F17] border border-[#49405D] rounded-2xl font-grotesk font-normal text-base leading-5 tracking-[-0.3125px] text-white/50 focus:outline-none focus:border-[#0E966F] focus:text-white"
                 placeholder="0.00"
               />
 
               {/* Spinner Controls */}
-              <div className="absolute right-[88px] top-[15px] flex flex-col gap-[1px]">
+              <div className="absolute right-22 top-3.75 flex flex-col gap-px">
                 <button
                   onClick={handleIncrement}
                   className="flex items-center justify-center w-[9.5px] h-[9.5px] bg-white/5 rounded-sm hover:bg-white/10"
@@ -127,7 +127,7 @@ export default function UnstakeModal({
               </div>
 
               {/* KROWN Label */}
-              <span className="absolute right-4 top-[14px] font-inter font-medium text-sm leading-5 tracking-[-0.15px] text-[#94A3B8]">
+              <span className="absolute right-4 top-3.5 font-inter font-medium text-sm leading-5 tracking-[-0.15px] text-[#94A3B8]">
                 KROWN
               </span>
             </div>
@@ -146,13 +146,13 @@ export default function UnstakeModal({
           {/* Warning Box */}
           <div className="flex flex-col gap-2 p-4 bg-[rgba(254,80,88,0.1)] border border-[rgba(254,80,88,0.2)] rounded-2xl">
             <div className="flex items-start gap-2">
-              <WarningIcon className="w-4 h-4 text-[#FE5058] mt-0.5 flex-shrink-0" />
+              <WarningIcon className="w-4 h-4 text-[#FE5058] mt-0.5 shrink-0" />
               <p className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#FE5058]">
                 Rewards will stop immediately after unstaking begins.
               </p>
             </div>
             <div className="flex items-start gap-2">
-              <WarningIcon className="w-4 h-4 text-[#FE5058] mt-0.5 flex-shrink-0" />
+              <WarningIcon className="w-4 h-4 text-[#FE5058] mt-0.5 shrink-0" />
               <p className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#FE5058]">
                 Tokens will be locked for 21 days.
               </p>
@@ -166,7 +166,7 @@ export default function UnstakeModal({
               id="confirm-unstake"
               checked={isConfirmed}
               onChange={(e) => setIsConfirmed(e.target.checked)}
-              className="w-[13px] h-[13px] mt-1 border border-[#AAB3D0] rounded bg-transparent cursor-pointer accent-[#0E966F]"
+              className="w-3.25 h-3.25 mt-1 border border-[#AAB3D0] rounded bg-transparent cursor-pointer accent-[#0E966F]"
             />
             <label
               htmlFor="confirm-unstake"

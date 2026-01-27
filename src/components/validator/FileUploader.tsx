@@ -55,14 +55,14 @@ export default function FileUploader({
     return (
       <div className="flex flex-col items-start gap-3 w-full">
         {/* Label */}
-        <label className="font-vietnam font-medium text-base leading-3.5 tracking-[-0.15px] text-white">
+        <label className="font-vietnam font-medium text-sm sm:text-base leading-3.5 tracking-[-0.15px] text-white">
           {label}
         </label>
 
-        {/* Logo Upload Area */}
-        <div className="flex flex-row justify-start items-start gap-6 w-full">
+        {/* Logo Upload Area - Stack on mobile, row on sm+ */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 w-full">
           {/* Thumbnail Preview */}
-          <div className="box-border flex items-center justify-center w-24 h-24 bg-white/5 border border-white/10 rounded-xl">
+          <div className="box-border flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-white/5 border border-white/10 rounded-xl shrink-0">
             {preview ? (
               <Image
                 src={preview}
@@ -72,24 +72,24 @@ export default function FileUploader({
                 className="w-full h-full object-cover rounded-xl"
               />
             ) : (
-              <ImageIcon className="w-8 h-8 text-[#AAB3D0]" />
+              <ImageIcon className="w-6 h-6 sm:w-8 sm:h-8 text-[#AAB3D0]" />
             )}
           </div>
 
           {/* Upload Zone */}
           <div
             onClick={handleClick}
-            className="box-border flex-1 flex flex-col items-center justify-center gap-3 py-8 bg-white/2 border border-dashed border-white/10 rounded-xl cursor-pointer hover:bg-white/4 transition-colors"
+            className="flex-1 w-full sm:w-auto flex flex-col items-center justify-center text-center gap-2 sm:gap-3 py-6 sm:py-8 px-4 bg-white/2 border border-dashed border-white/10 rounded-xl cursor-pointer hover:bg-white/4 transition-colors"
           >
-            <span className="font-vietnam font-medium text-base leading-5 tracking-[-0.01em] text-white">
+            <span className="font-vietnam font-medium text-sm sm:text-base leading-5 tracking-[-0.01em] text-white">
               Upload validator logo
             </span>
-            <span className="font-vietnam font-normal text-base leading-5 tracking-[-0.01em] text-[#AAB3D0]">
+            <span className="font-vietnam font-normal text-xs sm:text-base leading-5 tracking-[-0.01em] text-[#AAB3D0]">
               {description || "PNG, JPG or SVG, max 2MB"}
             </span>
             <button
               type="button"
-              className="flex items-center justify-center px-4 py-1.5 bg-[#0E966F] shadow-[inset_0px_0px_10.74px_rgba(255,255,255,0.25)] rounded-[10.74px] font-vietnam font-medium text-[13.42px] leading-[150%] text-white cursor-pointer"
+              className="flex items-center justify-center px-4 py-1.5 bg-[#0E966F] shadow-[inset_0px_0px_10.74px_rgba(255,255,255,0.25)] rounded-[10.74px] font-vietnam font-medium text-xs sm:text-[13.42px] leading-[150%] text-white cursor-pointer"
             >
               Choose File
             </button>
@@ -116,29 +116,29 @@ export default function FileUploader({
   return (
     <div className="flex flex-col items-start gap-3 w-full">
       {/* Label */}
-      <label className="font-vietnam font-medium text-base leading-3.5 tracking-[-0.15px] text-white">
+      <label className="font-vietnam font-medium text-sm sm:text-base leading-3.5 tracking-[-0.15px] text-white">
         {label}
       </label>
 
       {/* Upload Zone */}
       <div
         onClick={handleClick}
-        className="box-border flex flex-col items-center justify-center gap-4 w-full py-10 bg-white/2 border border-white/10 rounded-xl cursor-pointer hover:bg-white/4 transition-colors"
+        className="box-border flex flex-col items-center justify-center text-center gap-3 sm:gap-4 w-full py-8 sm:py-10 px-4 bg-white/2 border border-white/10 rounded-xl cursor-pointer hover:bg-white/4 transition-colors"
       >
         {/* Upload Icon */}
-        <div className="w-11 h-11 flex items-center justify-center">
-          <UploadIcon className="w-10 h-10 text-[#0E966F]" />
+        <div className="w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center">
+          <UploadIcon className="w-8 h-8 sm:w-10 sm:h-10 text-[#0E966F]" />
         </div>
 
-        <span className="font-vietnam font-medium text-base leading-5 tracking-[-0.01em] text-white">
+        <span className="font-vietnam font-medium text-sm sm:text-base leading-5 tracking-[-0.01em] text-white">
           Upload your validator key file
         </span>
-        <span className="font-vietnam font-normal text-base leading-5 tracking-[-0.01em] text-[#AAB3D0]">
+        <span className="font-vietnam font-normal text-xs sm:text-base leading-5 tracking-[-0.01em] text-[#AAB3D0]">
           {description || "Max file size 5 mb. Only JSON format allowed"}
         </span>
         <button
           type="button"
-          className="flex items-center justify-center px-4 py-1.5 bg-[#0E966F] shadow-[inset_0px_0px_10.74px_rgba(255,255,255,0.25)] rounded-[10.74px] font-vietnam font-medium text-[13.42px] leading-[150%] text-white cursor-pointer"
+          className="flex items-center justify-center px-4 py-1.5 bg-[#0E966F] shadow-[inset_0px_0px_10.74px_rgba(255,255,255,0.25)] rounded-[10.74px] font-vietnam font-medium text-xs sm:text-[13.42px] leading-[150%] text-white cursor-pointer"
         >
           Choose File
         </button>
