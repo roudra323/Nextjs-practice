@@ -1,4 +1,4 @@
-import { Check, Shield, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { LeftArrowIcon, ShieldFilledIcon, TikIcon } from "../icons";
 
 export default function ValidatorQualifiedBanner() {
@@ -52,24 +52,27 @@ export default function ValidatorQualifiedBanner() {
           </div>
 
           {/* Apply Button - shown inline on sm/md, separate row on lg */}
-          <button className="hidden sm:flex lg:hidden items-center justify-center gap-2 px-4 py-1 h-8 bg-[#0E966F] rounded-xl hover:opacity-90 transition-opacity flex-shrink-0">
+          <Link
+            href="/become-validator"
+            className="hidden sm:flex lg:hidden items-center justify-center gap-2 px-4 py-1 h-8 bg-[#0E966F] rounded-xl hover:opacity-90 transition-opacity flex-shrink-0"
+          >
             <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.3125px] text-white text-center">
               Apply as a validator
             </span>
             <LeftArrowIcon className="w-[18px] h-[18px] text-white" />
-          </button>
+          </Link>
         </div>
 
         {/* Apply Button - shown on mobile (xs) and large screens (lg+) */}
-        <button className="flex sm:hidden lg:flex items-center justify-center gap-2 px-4 py-1 h-8 bg-[#0E966F] rounded-xl hover:opacity-90 transition-opacity self-end lg:self-auto flex-shrink-0">
+        <Link
+          href="/become-validator"
+          className="flex sm:hidden lg:flex items-center justify-center gap-2 px-4 py-1 h-8 bg-[#0E966F] rounded-xl hover:opacity-90 transition-opacity self-end lg:self-auto flex-shrink-0"
+        >
           <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.3125px] text-white text-center">
             Apply as a validator
           </span>
-          <ArrowRight
-            className="w-[18px] h-[18px] text-white"
-            strokeWidth={1.5}
-          />
-        </button>
+          <LeftArrowIcon className="w-[18px] h-[18px] text-white" />
+        </Link>
       </div>
     </div>
   );

@@ -8,4 +8,6 @@ export { default as RequestPoolCreationModal } from "./RequestPoolCreationModal"
 export { default as NotificationPanel } from "./NotificationPanel";
 export { default as NodeSetupModal } from "./NodeSetupModal";
 export { default as ContactFormPanel } from "./ContactFormPanel";
+export { default as UnstakeModal } from "./UnstakeModal";
+export { default as UnstakeDetailsModal } from "./UnstakeDetailsModal";
 export type { Notification } from "./NotificationPanel";

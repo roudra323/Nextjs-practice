@@ -1,10 +1,17 @@
 "use client";
 
-import { Wallet, Shield } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Shield } from "lucide-react";
 import { InfoCard } from "../cards";
 import { WalletIcon } from "../icons";
 
 export default function StakeHoldings() {
+  const router = useRouter();
+
+  const handleUnstake = () => {
+    router.push("/dashboard/active-stakes");
+  };
+
   return (
     <div className="flex flex-col p-4 sm:p-6 w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl sm:rounded-3xl">
       {/* Header */}
@@ -27,6 +34,7 @@ export default function StakeHoldings() {
           valueSuffix="KROWN"
           icon={<Shield className="w-5 h-5" strokeWidth={1.5} />}
           actionText="Unstake"
+          onAction={handleUnstake}
         />
       </div>
 
@@ -37,7 +45,10 @@ export default function StakeHoldings() {
             Add Stake
           </span>
         </button>
-        <button className="flex items-center justify-center px-4 py-2 sm:py-1 h-auto sm:h-8 bg-[#0E966F] rounded-xl hover:opacity-90 transition-opacity">
+        <button
+          onClick={handleUnstake}
+          className="flex items-center justify-center px-4 py-2 sm:py-1 h-auto sm:h-8 bg-[#0E966F] rounded-xl hover:opacity-90 transition-opacity"
+        >
           <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.3125px] text-white text-center">
             Unstake
           </span>

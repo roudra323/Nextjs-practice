@@ -60,7 +60,8 @@ export default function EligibilityCheckModal({
             Validator Eligibility
           </h2>
           <p className="font-vietnam font-normal text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0] mb-6">
-            We&apos;ve checked your wallet against the requirements
+            We&apos;ve checked your wallet against the requirements for becoming
+            a self-hosted validator.
           </p>
 
           {/* Eligibility Checks */}
