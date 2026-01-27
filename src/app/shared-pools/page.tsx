@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SharedPoolsContent } from "@/components/sections";
 import { StakePoolModal } from "@/components/modals";
+import { StakeSuccessToast } from "@/components/toasts";
 
 interface PoolData {
   id: string;
@@ -21,6 +22,9 @@ const poolsData: Record<string, PoolData> = {
 export default function SharedPoolsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPool, setSelectedPool] = useState<PoolData | null>(null);
+  const [showToast, setShowToast] = useState(false);
+  const [stakedAmount, setStakedAmount] = useState("");
+  const [stakedPoolName, setStakedPoolName] = useState("");
 
   const handleViewAndJoin = (poolId: string) => {
     const pool = poolsData[poolId];
@@ -32,8 +36,15 @@ export default function SharedPoolsPage() {
 
   const handleStake = (amount: string) => {
     console.log(`Staking ${amount} KROWN to pool: ${selectedPool?.name}`);
+    setStakedAmount(amount);
+    setStakedPoolName(selectedPool?.name || "");
     setIsModalOpen(false);
+    setShowToast(true);
     // TODO: Handle actual staking logic
+  };
+
+  const handleCloseToast = () => {
+    setShowToast(false);
   };
 
   return (
@@ -45,6 +56,14 @@ export default function SharedPoolsPage() {
         onClose={() => setIsModalOpen(false)}
         onStake={handleStake}
         pool={selectedPool}
+      />
+
+      {/* Success Toast - rendered at page level so it persists after modal closes */}
+      <StakeSuccessToast
+        isVisible={showToast}
+        onClose={handleCloseToast}
+        amount={stakedAmount}
+        poolName={stakedPoolName}
       />
     </div>
   );

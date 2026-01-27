@@ -12,6 +12,7 @@ import {
   Play,
   ExternalLink,
 } from "lucide-react";
+import { APRIcon, ShieldFilledIcon, StakedIcon, TikIcon } from "../icons";
 
 // Requirement Card Component
 interface RequirementCardProps {
@@ -22,7 +23,7 @@ interface RequirementCardProps {
 
 function RequirementCard({ icon, title, value }: RequirementCardProps) {
   return (
-    <div className="box-border w-full sm:w-[188px] h-auto sm:h-[102px]  bg-white/5 border border-white/10 rounded-2xl p-4 relative">
+    <div className="box-border w-full sm:w-[188px] h-auto sm:h-[102px] items-start justify-center flex flex-col  bg-white/5 border border-white/10 rounded-2xl p-4 relative">
       <div className="text-[#00C48C]">{icon}</div>
       <div className="mt-3">
         <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.3125px] text-white">
@@ -220,7 +221,7 @@ const statsData = [
   {
     label: "Pools Manager Status",
     value: "Approved",
-    icon: <CheckCircle className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <TikIcon className="w-5 h-5" />,
     iconColor: "text-[#0E966F]",
   },
   {
@@ -232,7 +233,7 @@ const statsData = [
   {
     label: "Total stake",
     value: "18,500,000",
-    icon: <TrendingUp className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <StakedIcon className="w-5 h-5" />,
     iconColor: "text-[#EAB308]",
   },
   {
@@ -244,7 +245,7 @@ const statsData = [
   {
     label: "Monthly fees earned",
     value: "18,200 KROWN",
-    icon: <DollarSign className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <APRIcon className="w-5 h-5" />,
     iconColor: "text-[#00C48C]",
   },
 ];
@@ -291,13 +292,7 @@ export default function PoolManagementContent({
           <div className="flex items-start gap-3 sm:gap-4">
             {/* Shield Icon */}
             <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00C48C] to-[#0E966F] border border-white/10 shadow-[0px_4px_20px_rgba(0,196,140,0.41)] rounded-xl">
-              <svg
-                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z" />
-              </svg>
+              <ShieldFilledIcon />
             </div>
             <div>
               <h2 className="font-vietnam font-medium text-base sm:text-xl leading-5 sm:leading-6 tracking-[-0.45px] text-white">

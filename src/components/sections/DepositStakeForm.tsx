@@ -71,7 +71,7 @@ export default function DepositStakeForm({
               </div>
               <p className="font-vietnam font-normal text-sm leading-5 tracking-[-0.15px] text-[#B4FFEA]">
                 This amount will be locked in the smart contract. You can
-                withdraw after the unbonding period of 21 days.
+                unstake after a 21-day cooldown period.
               </p>
             </div>
           </div>

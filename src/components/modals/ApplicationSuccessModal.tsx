@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
+import { TikIcon } from "../icons";
 
 interface ApplicationSuccessModalProps {
   isOpen: boolean;
@@ -47,7 +48,7 @@ export default function ApplicationSuccessModal({
         <div className="relative z-10 flex flex-col items-center">
           {/* Success Icon */}
           <div className="flex items-center justify-center w-20 h-20 mt-[69px] bg-[rgba(14,150,111,0.2)] shadow-[0px_0px_40px_rgba(34,197,94,0.3)] rounded-full">
-            <CheckCircle className="w-12 h-12 text-[#0E966F]" strokeWidth={2} />
+            <TikIcon className="w-12 h-12 text-[#0E966F]" />
           </div>
 
           {/* Title */}
@@ -57,8 +58,8 @@ export default function ApplicationSuccessModal({
 
           {/* Description */}
           <p className="mt-[21px] w-[361px] font-vietnam font-normal text-base leading-6 tracking-[-0.45px] text-center text-[#AAB3D0]">
-            Your application is under review. You&apos;ll be notified once your
-            validator status is approved.
+            Your application is under review by the Krown team. Please check
+            again for update.
           </p>
 
           {/* Dashboard Button */}

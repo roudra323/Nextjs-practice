@@ -25,7 +25,8 @@ export default function StakePoolModal({
 
   const handleStake = () => {
     const input = document.getElementById("stake-amount") as HTMLInputElement;
-    onStake(input?.value || "25000");
+    const amount = input?.value || "25000";
+    onStake(amount);
   };
 
   return (
@@ -49,7 +50,7 @@ export default function StakePoolModal({
             </button>
             {/* Pool Info */}
             <div className="flex flex-col gap-1">
-              <h2 className="font-vietnam font-semibold text-lg leading-[18px] tracking-[-0.44px] text-white">
+              <h2 className="font-vietnam font-semibold text-lg leading-4.5 tracking-[-0.44px] text-white">
                 {pool.name}
               </h2>
               <span className="font-vietnam font-normal text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
@@ -77,7 +78,7 @@ export default function StakePoolModal({
 
           <div className="flex gap-6">
             {/* Avg Uptime Card */}
-            <div className="box-border flex items-center gap-4 p-4 w-[344px] h-[77px] bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl">
+            <div className="box-border flex items-center gap-4 p-4 w-86 h-19.25 bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl">
               <div className="flex items-center justify-center w-12 h-12 bg-[rgba(34,197,94,0.1)] rounded-2xl">
                 <CheckCircle
                   className="w-6 h-6 text-[#00C48C]"
@@ -95,7 +96,7 @@ export default function StakePoolModal({
             </div>
 
             {/* Blocks Produced Card */}
-            <div className="box-border flex items-center gap-4 p-4 w-[344px] h-[77px] bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl">
+            <div className="box-border flex items-center gap-4 p-4 w-86 h-19.25 bg-white/5 border border-white/10 shadow-[0px_2px_8px_rgba(0,0,0,0.3)] rounded-2xl">
               <div className="flex items-center justify-center w-12 h-12 bg-[rgba(139,92,246,0.1)] rounded-2xl">
                 <Layers className="w-6 h-6 text-[#966DFF]" strokeWidth={2} />
               </div>
@@ -119,10 +120,10 @@ export default function StakePoolModal({
           <div className="grid grid-cols-4 gap-6 mt-5">
             {/* Minimum Stake */}
             <div className="flex flex-col gap-4">
-              <span className="font-vietnam font-medium text-sm leading-[14px] tracking-[-0.15px] text-[#AAB3D0]">
+              <span className="font-vietnam font-medium text-sm leading-3.5 tracking-[-0.15px] text-[#AAB3D0]">
                 Minimum Stake Amount
               </span>
-              <span className="font-grotesk font-medium text-base leading-[14px] tracking-[-0.15px] text-white">
+              <span className="font-grotesk font-medium text-base leading-3.5 tracking-[-0.15px] text-white">
                 2300 KROWN
               </span>
             </div>
@@ -132,27 +133,27 @@ export default function StakePoolModal({
               <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
                 Est. Daily Reward
               </span>
-              <span className="font-grotesk font-medium text-base leading-[14px] tracking-[-0.15px] text-white">
+              <span className="font-grotesk font-medium text-base leading-3.5 tracking-[-0.15px] text-white">
                 7 KROWN
               </span>
             </div>
 
             {/* Platform Fee */}
             <div className="flex flex-col gap-4">
-              <span className="font-vietnam font-medium text-sm leading-[14px] tracking-[-0.15px] text-[#AAB3D0]">
+              <span className="font-vietnam font-medium text-sm leading-3.5 tracking-[-0.15px] text-[#AAB3D0]">
                 Platform
               </span>
-              <span className="font-grotesk font-medium text-base leading-[14px] tracking-[-0.15px] text-white">
+              <span className="font-grotesk font-medium text-base leading-3.5 tracking-[-0.15px] text-white">
                 2500 KROWN
               </span>
             </div>
 
             {/* Manager Fee */}
             <div className="flex flex-col gap-4">
-              <span className="font-vietnam font-medium text-sm leading-[14px] tracking-[-0.15px] text-[#AAB3D0]">
+              <span className="font-vietnam font-medium text-sm leading-3.5 tracking-[-0.15px] text-[#AAB3D0]">
                 Manager
               </span>
-              <span className="font-grotesk font-medium text-base leading-[14px] tracking-[-0.15px] text-white">
+              <span className="font-grotesk font-medium text-base leading-3.5 tracking-[-0.15px] text-white">
                 770 KROWN
               </span>
             </div>
@@ -160,7 +161,7 @@ export default function StakePoolModal({
 
           {/* Stake Amount Input */}
           <div className="flex flex-col gap-3 mt-5">
-            <label className="font-vietnam font-medium text-sm leading-[14px] tracking-[-0.15px] text-[#AAB3D0]">
+            <label className="font-vietnam font-medium text-sm leading-3.5 tracking-[-0.15px] text-[#AAB3D0]">
               Stake Amount (KROWN)
             </label>
             <input
@@ -178,7 +179,7 @@ export default function StakePoolModal({
           className="absolute bottom-6 left-6 right-6 flex items-center justify-center gap-1.5 h-12 bg-[#0E966F] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl font-vietnam font-medium text-base leading-5 tracking-[-0.15px] text-white hover:bg-[#0C7D5D] transition-colors cursor-pointer"
         >
           Stake And Join
-          <ArrowRight className="w-[18px] h-[18px]" />
+          <ArrowRight className="w-4.5 h-4.5" />
         </button>
       </div>
     </div>

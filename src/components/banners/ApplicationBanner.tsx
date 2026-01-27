@@ -1,7 +1,7 @@
-import { AlertTriangle, CheckCircle, AlertCircle } from "lucide-react";
-import { TikIcon } from "../icons";
+import { AlertTriangle, AlertCircle } from "lucide-react";
+import { InfoIcon, TikIcon } from "../icons";
 
-type ApplicationStatus = "pending" | "approved" | "rejected";
+type ApplicationStatus = "pending" | "approved" | "rejected" | "info";
 
 interface ApplicationBannerProps {
   status?: ApplicationStatus;
@@ -42,6 +42,16 @@ const statusConfig = {
     defaultTitle: "Unfortunately your application is rejected.",
     defaultDescription:
       "Ensure your hardware meets all requirements before reapplying.",
+  },
+  info: {
+    icon: InfoIcon,
+    bgColor: "bg-[rgba(14,150,111,0.1)]",
+    borderColor: "border-[rgba(14,150,111,0.2)]",
+    iconColor: "text-[#00C48C]",
+    titleColor: "text-[#00C48C]",
+    descriptionColor: "text-[#B4FFEA]",
+    defaultTitle: "Information",
+    defaultDescription: "Here is some helpful information for you.",
   },
 };
 

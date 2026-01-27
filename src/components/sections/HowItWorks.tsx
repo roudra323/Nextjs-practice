@@ -1,7 +1,14 @@
 "use client";
 
 import { User, HardDrive, Wallet, CheckCircle, Info } from "lucide-react";
-import { InfoIconGreen } from "../icons";
+import {
+  InfoIconGreen,
+  LeftArrowIcon,
+  ProfileIcon,
+  ServerIcon,
+  TikIcon,
+  WalletIcon,
+} from "../icons";
 import ApplicationBanner from "../banners/ApplicationBanner";
 
 interface Step {
@@ -20,50 +27,27 @@ const steps: Step[] = [
     number: 1,
     title: "Select Profile",
     description: "Set up your public validator identity.",
-    icon: <User className="w-6 h-6 text-[#00C48C]" strokeWidth={2} />,
+    icon: <ProfileIcon className="w-6 h-6 text-[#00C48C]" />,
   },
   {
     number: 2,
     title: "Setup Node",
     description: "Configure your server and connection.",
-    icon: <HardDrive className="w-6 h-6 text-[#00C48C]" strokeWidth={2} />,
+    icon: <ServerIcon className="w-6 h-6 [&_path]:stroke-[#00C48C]" />,
   },
   {
     number: 3,
     title: "Deposit Stake",
     description: "Lock the required 100M KROWN stake.",
-    icon: <Wallet className="w-6 h-6 text-[#00C48C]" strokeWidth={2} />,
+    icon: <WalletIcon className="w-6 h-6 [&_path]:stroke-[#00C48C]" />,
   },
   {
     number: 4,
     title: "Go Live",
     description: "Your node becomes active on the network.",
-    icon: <CheckCircle className="w-6 h-6 text-[#00C48C]" strokeWidth={2} />,
+    icon: <TikIcon className="w-6 h-6 [&_path]:stroke-[#00C48C]" />,
   },
 ];
-
-// Arrow icon component
-function ArrowIcon() {
-  return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="rotate-0"
-    >
-      <path
-        d="M12 5L12 19M12 5L6 11M12 5L18 11"
-        stroke="#00C48C"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        transform="rotate(90 12 12)"
-      />
-    </svg>
-  );
-}
 
 export default function HowItWorks({ onStartOnboarding }: HowItWorksProps) {
   return (
@@ -81,7 +65,8 @@ export default function HowItWorks({ onStartOnboarding }: HowItWorksProps) {
             How it Works
           </h2>
           <p className="font-vietnam font-normal text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0] text-center">
-            We&apos;ve checked your wallet against the requirements
+            Becoming a self-hosted validator is a simple 4-step process. Here is
+            what you need to do to get your node running.
           </p>
         </div>
 
@@ -106,7 +91,9 @@ export default function HowItWorks({ onStartOnboarding }: HowItWorksProps) {
               </div>
 
               {/* Arrow between steps (not after last) */}
-              {index < steps.length - 1 && <ArrowIcon />}
+              {index < steps.length - 1 && (
+                <LeftArrowIcon className="w-9 h-10 [&_path]:stroke-[#00C48C]" />
+              )}
             </div>
           ))}
         </div>

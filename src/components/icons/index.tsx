@@ -435,9 +435,9 @@ export const InfoIcon = ({ size = 20, className = "" }) => (
     fill="none"
     className={className}
   >
-    <circle cx="10" cy="10" r="8.33" stroke="#AAB3D0" strokeWidth="1.5" />
-    <path d="M10 10V6.67" stroke="#AAB3D0" strokeWidth="1.5" />
-    <circle cx="10" cy="13.33" r="0.83" fill="#AAB3D0" />
+    <circle cx="10" cy="10" r="8.33" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M10 10V6.67" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="10" cy="13.33" r="0.83" fill="currentColor" />
   </svg>
 );
 
@@ -602,12 +602,12 @@ export const Notifications = ({ size = 24, className = "" }) => (
     <path
       d="M5.81186 8.93778C5.81186 5.52036 8.58222 2.75 11.9996 2.75C15.417 2.75 18.1874 5.52036 18.1874 8.93777V13.5184L19.8 17.8572H4.19922L5.81186 13.5184V8.93778Z"
       stroke="white"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
     <path
       d="M15.1673 17.8574V18.0834C15.1673 19.8323 13.7496 21.2501 12.0007 21.2501C10.2517 21.2501 8.83398 19.8323 8.83398 18.0834V17.8574"
       stroke="white"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
   </svg>
 );
@@ -624,16 +624,16 @@ export const WalletIcon = ({ size = 16, className = "" }) => (
     <path
       d="M12.6667 4.66667V2.66667C12.6667 2.48986 12.5964 2.32029 12.4714 2.19526C12.3464 2.07024 12.1768 2 12 2H3.33333C2.97971 2 2.64057 2.14048 2.39052 2.39052C2.14048 2.64057 2 2.97971 2 3.33333C2 3.68696 2.14048 4.02609 2.39052 4.27614C2.64057 4.52619 2.97971 4.66667 3.33333 4.66667H13.3333C13.5101 4.66667 13.6797 4.7369 13.8047 4.86193C13.9298 4.98695 14 5.15652 14 5.33333V8M14 8H12C11.6464 8 11.3072 8.14048 11.0572 8.39052C10.8071 8.64057 10.6667 8.97971 10.6667 9.33333C10.6667 9.68696 10.8071 10.0261 11.0572 10.2761C11.3072 10.5262 11.6464 10.6667 12 10.6667H14C14.1768 10.6667 14.3464 10.5964 14.4714 10.4714C14.5964 10.3464 14.6667 10.1768 14.6667 10V8.66667C14.6667 8.48986 14.5964 8.32029 14.4714 8.19526C14.3464 8.07024 14.1768 8 14 8Z"
       stroke="#00C48C"
-      stroke-width="1.33333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M2 3.33331V12.6666C2 13.0203 2.14048 13.3594 2.39052 13.6095C2.64057 13.8595 2.97971 14 3.33333 14H13.3333C13.5101 14 13.6797 13.9297 13.8047 13.8047C13.9298 13.6797 14 13.5101 14 13.3333V10.6666"
       stroke="#00C48C"
-      stroke-width="1.33333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -666,14 +666,14 @@ export const LeftArrowIcon = ({ size = 18, className = "" }) => (
     <path
       d="M14.1752 9L3.375 9"
       stroke="white"
-      stroke-width="1.5"
-      stroke-linecap="square"
+      strokeWidth="1.5"
+      strokeLinecap="square"
     />
     <path
       d="M10.0876 13.5184L14.6251 9.00044L10.0876 4.48169"
       stroke="white"
-      stroke-width="1.5"
-      stroke-linecap="square"
+      strokeWidth="1.5"
+      strokeLinecap="square"
     />
   </svg>
 );
@@ -690,25 +690,25 @@ export const ValidatorKey = ({ size = 24, className = "" }) => (
     <path
       d="M16.4917 12.4417C14.775 14.1501 12.3167 14.6751 10.1583 14.0001L6.23334 17.9167C5.95001 18.2084 5.39168 18.3834 4.99168 18.3251L3.17501 18.0751C2.57501 17.9917 2.01668 17.4251 1.92501 16.8251L1.67501 15.0084C1.61668 14.6084 1.80834 14.0501 2.08334 13.7667L6.00001 9.85006C5.33334 7.68339 5.85001 5.22506 7.56668 3.51672C10.025 1.05839 14.0167 1.05839 16.4833 3.51672C18.95 5.97506 18.95 9.98339 16.4917 12.4417Z"
       stroke="#00C48C"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.74167 14.575L7.65834 16.4916"
       stroke="#00C48C"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M12.0833 9.16663C12.7737 9.16663 13.3333 8.60698 13.3333 7.91663C13.3333 7.22627 12.7737 6.66663 12.0833 6.66663C11.393 6.66663 10.8333 7.22627 10.8333 7.91663C10.8333 8.60698 11.393 9.16663 12.0833 9.16663Z"
       stroke="#00C48C"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -725,55 +725,55 @@ export const CalendarIcon = ({ size = 24, className = "" }) => (
     <path
       d="M6.66669 1.66663V4.16663"
       stroke="#00C48C"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M13.3333 1.66663V4.16663"
       stroke="#00C48C"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M2.91669 7.57495H17.0834"
       stroke="#00C48C"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M17.5 7.08329V14.1666C17.5 16.6666 16.25 18.3333 13.3333 18.3333H6.66667C3.75 18.3333 2.5 16.6666 2.5 14.1666V7.08329C2.5 4.58329 3.75 2.91663 6.66667 2.91663H13.3333C16.25 2.91663 17.5 4.58329 17.5 7.08329Z"
       stroke="#00C48C"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M9.99626 11.4167H10.0037"
       stroke="#00C48C"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M6.91191 11.4167H6.91939"
       stroke="#00C48C"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M6.91191 13.9167H6.91939"
       stroke="#00C48C"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -790,9 +790,9 @@ export const CopyIcon = ({ size = 24, className = "" }) => (
     <g
       opacity=".23"
       stroke="#aab3d0"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path d="M13.333 10.75v3.5c0 2.917-1.166 4.083-4.083 4.083h-3.5c-2.917 0-4.083-1.166-4.083-4.083v-3.5c0-2.917 1.166-4.083 4.083-4.083h3.5c2.917 0 4.083 1.166 4.083 4.083" />
       <path d="M18.333 5.75v3.5c0 2.917-1.166 4.083-4.083 4.083h-.917V10.75c0-2.917-1.166-4.083-4.083-4.083H6.667V5.75c0-2.917 1.166-4.083 4.083-4.083h3.5c2.917 0 4.083 1.166 4.083 4.083" />
@@ -812,26 +812,26 @@ export const FeesPaidIcon = ({ size = 24, className = "" }) => (
     <path
       d="M14.167 17.083H5.833c-2.5 0-4.166-1.25-4.166-4.166V7.083c0-2.916 1.666-4.166 4.166-4.166h8.334c2.5 0 4.166 1.25 4.166 4.166v5.834c0 2.916-1.666 4.166-4.166 4.166"
       stroke="#00c48c"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m5.833-6.667h-2.5"
       stroke="#00c48c"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M6.667 14.167h-2.5"
       stroke="#292d32"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -847,24 +847,24 @@ export const RewwardIcon = ({ size = 24, className = "" }) => (
   >
     <path
       d="M15.4166 10.5416V13.625C15.4166 16.225 12.9916 18.3333 9.99998 18.3333C7.00831 18.3333 4.58331 16.225 4.58331 13.625V10.5416C4.58331 13.1416 7.00831 15 9.99998 15C12.9916 15 15.4166 13.1416 15.4166 10.5416Z"
-      stroke="#00C48C"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M15.4166 6.37496C15.4166 7.13329 15.2083 7.83329 14.8416 8.43329C13.95 9.89996 12.1166 10.8333 9.99998 10.8333C7.88331 10.8333 6.04998 9.89996 5.15832 8.43329C4.79165 7.83329 4.58331 7.13329 4.58331 6.37496C4.58331 5.07496 5.19164 3.89996 6.16664 3.04996C7.14997 2.19163 8.49998 1.66663 9.99998 1.66663C11.5 1.66663 12.85 2.19163 13.8333 3.04163C14.8083 3.89996 15.4166 5.07496 15.4166 6.37496Z"
-      stroke="#00C48C"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M15.4166 6.37496V10.5416C15.4166 13.1416 12.9916 15 9.99998 15C7.00831 15 4.58331 13.1416 4.58331 10.5416V6.37496C4.58331 3.77496 7.00831 1.66663 9.99998 1.66663C11.5 1.66663 12.85 2.19163 13.8333 3.04163C14.8083 3.89996 15.4166 5.07496 15.4166 6.37496Z"
-      stroke="#00C48C"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -881,9 +881,9 @@ export const UnbondingEndIcon = ({ size = 24, className = "" }) => (
     <path
       d="M4.562 4.562h6.517v6.517m-6.517 0 6.517-6.517"
       stroke="#00c48c"
-      stroke-width="1.303"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.303"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -900,23 +900,183 @@ export const WarningIcon = ({ size = 24, className = "" }) => (
     <path
       d="M14.4866 12L9.15329 2.66665C9.037 2.46146 8.86836 2.29078 8.66457 2.17203C8.46078 2.05329 8.22915 1.99072 7.99329 1.99072C7.75743 1.99072 7.52579 2.05329 7.322 2.17203C7.11822 2.29078 6.94958 2.46146 6.83329 2.66665L1.49995 12C1.38241 12.2036 1.32077 12.4346 1.32129 12.6697C1.32181 12.9047 1.38447 13.1355 1.50292 13.3385C1.62136 13.5416 1.79138 13.7097 1.99575 13.8259C2.20011 13.942 2.43156 14.0021 2.66662 14H13.3333C13.5672 13.9997 13.797 13.938 13.9995 13.8208C14.202 13.7037 14.3701 13.5354 14.487 13.3327C14.6038 13.1301 14.6653 12.9002 14.6653 12.6663C14.6652 12.4324 14.6036 12.2026 14.4866 12Z"
       stroke="#FE5058"
-      stroke-width="1.33333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M8 6V8.66667"
       stroke="#FE5058"
-      stroke-width="1.33333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M8 11.3333H8.00667"
       stroke="#FE5058"
-      stroke-width="1.33333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
+
+export const ProfileIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10m8.59 10c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7"
+      stroke="#00c48c"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const ImageIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 34 34"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M26.01 32.229H7.92a6.13 6.13 0 0 1-5.257-2.932 6.16 6.16 0 0 1-.269-6.021l2.437-4.888c.793-1.587 2.068-2.578 3.499-2.734 1.43-.156 2.89.552 3.995 1.927l.312.396c.623.765 1.345 1.176 2.054 1.105.708-.056 1.36-.566 1.841-1.43l2.678-4.831c1.105-1.998 2.578-3.032 4.18-2.961 1.586.085 2.946 1.275 3.852 3.372l4.435 10.355a6.16 6.16 0 0 1-.524 5.837 6.07 6.07 0 0 1-5.143 2.805M8.727 17.779c-.057 0-.114 0-.17.014-.709.071-1.36.638-1.828 1.559l-2.436 4.887a4.05 4.05 0 0 0 .17 3.953 4.03 4.03 0 0 0 3.456 1.926h18.077a3.99 3.99 0 0 0 3.386-1.827c.765-1.162.892-2.55.34-3.825L25.288 14.11c-.539-1.275-1.29-2.054-2.012-2.083-.666-.042-1.53.666-2.21 1.87l-2.678 4.831c-.821 1.473-2.11 2.394-3.513 2.522-1.402.113-2.833-.567-3.896-1.898l-.311-.397c-.595-.78-1.275-1.176-1.941-1.176m1.147-5.383a5.323 5.323 0 0 1-5.312-5.313 5.314 5.314 0 0 1 5.312-5.312 5.314 5.314 0 0 1 5.313 5.313 5.314 5.314 0 0 1-5.313 5.312m0-8.5a3.19 3.19 0 0 0-3.187 3.188 3.19 3.19 0 0 0 3.187 3.187 3.19 3.19 0 0 0 3.188-3.188 3.19 3.19 0 0 0-3.188-3.187"
+      fill="#aab3d0"
+    />
+  </svg>
+);
+
+export const UploadIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 45 45"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M30.824 16.688c6.75.58 9.507 4.05 9.507 11.643v.244c0 8.381-3.357 11.738-11.738 11.738H16.387c-8.381 0-11.738-3.357-11.738-11.738v-.244c0-7.537 2.72-11.006 9.357-11.625M22.5 28.125V6.788m6.28 4.181L22.5 4.688l-6.282 6.28"
+      stroke="#0e966f"
+      strokeWidth="3.375"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const CodeIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M4.593 6a4.2 4.2 0 0 1 1.62 1.433c.234.347.234.794 0 1.14A4.23 4.23 0 0 1 4.593 10m4.074 0h2.666"
+      stroke="#00c48c"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M6 14.666h4c3.333 0 4.667-1.333 4.667-4.666V6c0-3.334-1.334-4.667-4.667-4.667H6C2.667 1.333 1.333 2.666 1.333 6v4c0 3.333 1.334 4.666 4.667 4.666"
+      stroke="#00c48c"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const PoolIcona = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M6.36997 9.50993C2.28997 9.79993 2.29997 15.7099 6.36997 15.9999H16.03C17.2 16.0099 18.33 15.5699 19.2 14.7799C22.06 12.2799 20.53 7.27991 16.76 6.79991C15.41 -1.34009 3.61998 1.74993 6.40998 9.50993"
+      stroke="white"
+      strokeWidth="2"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12 16V19"
+      stroke="white"
+      strokeWidth="2"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12 23C13.1046 23 14 22.1046 14 21C14 19.8954 13.1046 19 12 19C10.8954 19 10 19.8954 10 21C10 22.1046 10.8954 23 12 23Z"
+      stroke="white"
+      strokeWidth="2"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M18 21H14"
+      stroke="white"
+      strokeWidth="2"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10 21H6"
+      stroke="white"
+      strokeWidth="2"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const LockIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M6 10V8c0-3.31 1-6 6-6s6 2.69 6 6v2m-6 8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+      stroke="#fff"
+      strokeWidth="2"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M17 22H7c-4 0-5-1-5-5v-2c0-4 1-5 5-5h10c4 0 5 1 5 5v2c0 4-1 5-5 5"
+      stroke="#fff"
+      strokeWidth="2"
+      stroke-linecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// export const Reward

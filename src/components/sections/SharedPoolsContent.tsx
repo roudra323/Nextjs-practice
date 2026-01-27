@@ -8,6 +8,7 @@ import {
   Info,
   ArrowRight,
 } from "lucide-react";
+import { LockIcon, PoolIcona, RewwardIcon } from "../icons";
 
 // Stat Card Component
 interface StatCardProps {
@@ -162,18 +163,22 @@ function SharedPoolCard({ pool, onViewAndJoin }: SharedPoolCardProps) {
 // How It Works Stepper
 function SharedPoolHowItWorks() {
   const steps = [
-    { label: "Choose a Pool", stepNumber: "Step 1" },
-    { label: "Stake Your Tokens", stepNumber: "Step 2" },
-    { label: "Earn Proportional Rewards", stepNumber: "Step 3" },
+    { label: "Choose a Pool", stepNumber: "Step 1", icon: <PoolIcona /> },
+    { label: "Stake Your Tokens", stepNumber: "Step 2", icon: <LockIcon /> },
+    {
+      label: "Earn Proportional Rewards",
+      stepNumber: "Step 3",
+      icon: <RewwardIcon />,
+    },
   ];
 
   return (
-    <div className="box-border w-full bg-white/5 border border-white/10 rounded-[20px] p-6">
-      <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.3125px] text-white mb-8">
+    <div className="flex flex-col w-full bg-white/5 border border-white/10 rounded-[20px] p-6">
+      <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.3125px] text-white mb-3">
         How it works
       </h2>
 
-      <div className="flex items-start justify-center gap-3">
+      <div className="flex items-start justify-center gap-3 mb-3">
         {steps.map((step, index) => (
           <div key={index} className="flex items-center">
             {/* Step */}
@@ -181,43 +186,8 @@ function SharedPoolHowItWorks() {
               <span className="font-vietnam font-medium text-base leading-5 text-white/25 mb-4">
                 {step.stepNumber}
               </span>
-              <div className="w-[50.76px] h-[50.76px] bg-[#0E966F] rounded-full flex items-center justify-center">
-                {index === 0 && (
-                  <svg
-                    className="w-6 h-6 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M19.5 10c0 4.5-7.5 11-7.5 11S4.5 14.5 4.5 10a7.5 7.5 0 1115 0z" />
-                    <circle cx="12" cy="10" r="2.5" />
-                  </svg>
-                )}
-                {index === 1 && (
-                  <svg
-                    className="w-6 h-6 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                  </svg>
-                )}
-                {index === 2 && (
-                  <svg
-                    className="w-6 h-6 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <circle cx="12" cy="12" r="8" />
-                    <path d="M12 8v8M8 12h8" />
-                  </svg>
-                )}
+              <div className="w-[50.76px] h-[50.76px] bg-[#0E966F] text-white rounded-full flex items-center justify-center">
+                {step.icon}
               </div>
               <span className="font-vietnam font-medium text-base leading-5 text-white text-center mt-4 whitespace-nowrap">
                 {step.label}

@@ -9,6 +9,7 @@ import StepperHorizontal from "../validator/StepperHorizontal";
 import FormInput from "../validator/FormInput";
 import CodeBlock from "../validator/CodeBlock";
 import ApplicationBanner from "../banners/ApplicationBanner";
+import { CodeIcon } from "../icons";
 
 interface NodeConfigurationFormProps {
   onBack?: () => void;
@@ -83,7 +84,7 @@ export default function NodeConfigurationForm({
             <div className="flex items-center justify-between mb-5">
               {/* Title with Icon */}
               <div className="flex items-center gap-2">
-                <Code className="w-4 h-4 text-[#00C48C]" strokeWidth={1.5} />
+                <CodeIcon className="w-4 h-4 text-[#00C48C]" />
                 <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-white">
                   Generate Validator Keys
                 </span>
@@ -133,7 +134,7 @@ export default function NodeConfigurationForm({
 
             {/* Info Banner */}
             <ApplicationBanner
-              status="approved"
+              status="info"
               title="Save your Mnemonic Phrase!"
               description="The CLI will output a 24-word phrase. Write this down on paper and store it securely. You will need it to recover your validator funds."
             />

@@ -1,6 +1,7 @@
 "use client";
 
-import { User, HardDrive, Wallet, Globe } from "lucide-react";
+import { Wallet, Globe } from "lucide-react";
+import { ProfileIcon, ServerIcon, WalletIcon } from "../icons";
 
 export interface Step {
   id: number;
@@ -17,22 +18,22 @@ const defaultSteps: Step[] = [
   {
     id: 1,
     label: "Profile",
-    icon: <User className="w-6 h-6" strokeWidth={2} />,
+    icon: <ProfileIcon className="w-6 h-6 [&_path]:stroke-[#FFFFFF]" />,
   },
   {
     id: 2,
     label: "Node Setup",
-    icon: <HardDrive className="w-6 h-6" strokeWidth={2} />,
+    icon: <ServerIcon className="w-6 h-6 [&_path]:stroke-[#FFFFFF]" />,
   },
   {
     id: 3,
     label: "Deposit Stake",
-    icon: <Wallet className="w-6 h-6" strokeWidth={2} />,
+    icon: <WalletIcon className="w-6 h-6 [&_path]:stroke-[#FFFFFF]" />,
   },
   {
     id: 4,
     label: "Go Live",
-    icon: <Globe className="w-6 h-6" strokeWidth={2} />,
+    icon: <Globe className="w-6 h-6 [&_path]:stroke-[#FFFFFF]" />,
   },
 ];
 

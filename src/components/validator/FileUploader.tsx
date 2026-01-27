@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { Upload, ImageIcon } from "lucide-react";
+import { ImageIcon, UploadIcon } from "../icons";
 
 interface FileUploaderProps {
   label: string;
@@ -72,7 +72,7 @@ export default function FileUploader({
                 className="w-full h-full object-cover rounded-xl"
               />
             ) : (
-              <ImageIcon className="w-8 h-8 text-[#AAB3D0]" strokeWidth={1.5} />
+              <ImageIcon className="w-8 h-8 text-[#AAB3D0]" />
             )}
           </div>
 
@@ -127,7 +127,7 @@ export default function FileUploader({
       >
         {/* Upload Icon */}
         <div className="w-11 h-11 flex items-center justify-center">
-          <Upload className="w-10 h-10 text-[#0E966F]" strokeWidth={2.5} />
+          <UploadIcon className="w-10 h-10 text-[#0E966F]" />
         </div>
 
         <span className="font-vietnam font-medium text-base leading-5 tracking-[-0.01em] text-white">
