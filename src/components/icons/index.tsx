@@ -691,7 +691,7 @@ export const ValidatorKey = ({ size = 24, className = "" }) => (
       d="M16.4917 12.4417C14.775 14.1501 12.3167 14.6751 10.1583 14.0001L6.23334 17.9167C5.95001 18.2084 5.39168 18.3834 4.99168 18.3251L3.17501 18.0751C2.57501 17.9917 2.01668 17.4251 1.92501 16.8251L1.67501 15.0084C1.61668 14.6084 1.80834 14.0501 2.08334 13.7667L6.00001 9.85006C5.33334 7.68339 5.85001 5.22506 7.56668 3.51672C10.025 1.05839 14.0167 1.05839 16.4833 3.51672C18.95 5.97506 18.95 9.98339 16.4917 12.4417Z"
       stroke="#00C48C"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -699,7 +699,7 @@ export const ValidatorKey = ({ size = 24, className = "" }) => (
       d="M5.74167 14.575L7.65834 16.4916"
       stroke="#00C48C"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -726,7 +726,7 @@ export const CalendarIcon = ({ size = 24, className = "" }) => (
       d="M6.66669 1.66663V4.16663"
       stroke="#00C48C"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -734,7 +734,7 @@ export const CalendarIcon = ({ size = 24, className = "" }) => (
       d="M13.3333 1.66663V4.16663"
       stroke="#00C48C"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -742,7 +742,7 @@ export const CalendarIcon = ({ size = 24, className = "" }) => (
       d="M2.91669 7.57495H17.0834"
       stroke="#00C48C"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -750,7 +750,7 @@ export const CalendarIcon = ({ size = 24, className = "" }) => (
       d="M17.5 7.08329V14.1666C17.5 16.6666 16.25 18.3333 13.3333 18.3333H6.66667C3.75 18.3333 2.5 16.6666 2.5 14.1666V7.08329C2.5 4.58329 3.75 2.91663 6.66667 2.91663H13.3333C16.25 2.91663 17.5 4.58329 17.5 7.08329Z"
       stroke="#00C48C"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -813,7 +813,7 @@ export const FeesPaidIcon = ({ size = 24, className = "" }) => (
       d="M14.167 17.083H5.833c-2.5 0-4.166-1.25-4.166-4.166V7.083c0-2.916 1.666-4.166 4.166-4.166h8.334c2.5 0 4.166 1.25 4.166 4.166v5.834c0 2.916-1.666 4.166-4.166 4.166"
       stroke="#00c48c"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -821,7 +821,7 @@ export const FeesPaidIcon = ({ size = 24, className = "" }) => (
       d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m5.833-6.667h-2.5"
       stroke="#00c48c"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -829,7 +829,7 @@ export const FeesPaidIcon = ({ size = 24, className = "" }) => (
       d="M6.667 14.167h-2.5"
       stroke="#292d32"
       strokeWidth="1.5"
-      stroke-miterlimit="10"
+      strokeMiterlimit="10"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -1014,40 +1014,40 @@ export const PoolIcona = ({ size = 24, className = "" }) => (
       d="M6.36997 9.50993C2.28997 9.79993 2.29997 15.7099 6.36997 15.9999H16.03C17.2 16.0099 18.33 15.5699 19.2 14.7799C22.06 12.2799 20.53 7.27991 16.76 6.79991C15.41 -1.34009 3.61998 1.74993 6.40998 9.50993"
       stroke="white"
       strokeWidth="2"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M12 16V19"
       stroke="white"
       strokeWidth="2"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M12 23C13.1046 23 14 22.1046 14 21C14 19.8954 13.1046 19 12 19C10.8954 19 10 19.8954 10 21C10 22.1046 10.8954 23 12 23Z"
       stroke="white"
       strokeWidth="2"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M18 21H14"
       stroke="white"
       strokeWidth="2"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M10 21H6"
       stroke="white"
       strokeWidth="2"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
   </svg>
@@ -1066,14 +1066,14 @@ export const LockIcon = ({ size = 24, className = "" }) => (
       d="M6 10V8c0-3.31 1-6 6-6s6 2.69 6 6v2m-6 8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
       stroke="#fff"
       strokeWidth="2"
-      stroke-linecap="round"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M17 22H7c-4 0-5-1-5-5v-2c0-4 1-5 5-5h10c4 0 5 1 5 5v2c0 4-1 5-5 5"
       stroke="#fff"
       strokeWidth="2"
-      stroke-linecap="round"
+      strokeLinecap="round"
       strokeLinejoin="round"
     />
   </svg>

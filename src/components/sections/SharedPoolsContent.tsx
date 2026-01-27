@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import {
   Network,
   Activity,
@@ -7,6 +8,8 @@ import {
   CheckCircle,
   Info,
   ArrowRight,
+  Plus,
+  Minus,
 } from "lucide-react";
 import { LockIcon, PoolIcona, RewwardIcon } from "../icons";
 
@@ -292,6 +295,24 @@ interface SharedPoolsContentProps {
 export default function SharedPoolsContent({
   onViewAndJoin,
 }: SharedPoolsContentProps) {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [minUptime, setMinUptime] = useState(98);
+  const filterRef = useRef<HTMLDivElement>(null);
+
+  // Close filter on click outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        filterRef.current &&
+        !filterRef.current.contains(event.target as Node)
+      ) {
+        setIsFilterOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const handleViewAndJoin = (poolId: string) => {
     console.log(`View and join pool: ${poolId}`);
     onViewAndJoin?.(poolId);
@@ -321,20 +342,92 @@ export default function SharedPoolsContent({
           <h2 className="font-vietnam font-medium text-lg sm:text-xl leading-6 tracking-[-0.15px] text-white">
             Shared Pools
           </h2>
-          <button className="box-border flex items-center justify-center gap-1.5 px-2 py-2 sm:py-3 h-8 sm:h-9 bg-[#242630] border border-white/10 rounded-xl">
-            <svg
-              className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#AAB3D0]"
-              viewBox="0 0 14 14"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
+
+          {/* Filter Button with Dropdown */}
+          <div className="relative" ref={filterRef}>
+            <button
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
+              className="box-border flex items-center justify-center gap-1.5 px-2 py-2 sm:py-3 h-8 sm:h-9 bg-[#242630] border border-white/10 rounded-xl"
             >
-              <path d="M1 3h12M3 7h8M5 11h4" />
-            </svg>
-            <span className="font-vietnam font-normal text-xs sm:text-sm leading-[150%] text-[#AAB3D0]">
-              Filter
-            </span>
-          </button>
+              <svg
+                className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#AAB3D0]"
+                viewBox="0 0 14 14"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path d="M1 3h12M3 7h8M5 11h4" />
+              </svg>
+              <span className="font-vietnam font-normal text-xs sm:text-sm leading-[150%] text-[#AAB3D0]">
+                Filter
+              </span>
+            </button>
+
+            {/* Filter Dropdown Modal */}
+            {isFilterOpen && (
+              <div className="absolute right-0 top-full mt-2 w-71.25 h-32.75 bg-[#0B0E17] border border-white/10 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-2xl z-50">
+                {/* Min uptime */}
+                <div className="absolute left-4.5 top-4.75 flex items-center gap-1.75">
+                  <span className="font-vietnam font-medium text-base leading-5 text-white">
+                    Min uptime
+                  </span>
+                </div>
+                {/* Min uptime controls */}
+                <div className="absolute right-3 top-4 flex items-center gap-1.5">
+                  <button
+                    onClick={() => setMinUptime(Math.max(0, minUptime - 1))}
+                    className="box-border flex items-center justify-center w-6 h-6.5 bg-white/5 border border-white/10 rounded-lg"
+                  >
+                    <Minus className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  </button>
+                  <div className="box-border flex items-center justify-center w-12.75 h-6.5 border border-white/10 rounded-lg">
+                    <span className="font-vietnam font-medium text-xs leading-4.5 tracking-[-0.44px] text-white">
+                      {minUptime}%
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => setMinUptime(Math.min(100, minUptime + 1))}
+                    className="box-border flex items-center justify-center w-6 h-6.5 bg-white/5 border border-white/10 rounded-lg"
+                  >
+                    <Plus
+                      className="w-4 h-4 text-[#AAB3D0]"
+                      strokeWidth={1.5}
+                    />
+                  </button>
+                </div>
+
+                {/* Max fee */}
+                <div className="absolute left-4.5 top-14.25 flex items-center gap-1.75">
+                  <span className="font-vietnam font-medium text-base leading-5 text-white">
+                    Max fee
+                  </span>
+                </div>
+                {/* Max fee value */}
+                <div className="absolute right-3 top-13.5 flex items-center gap-1.5">
+                  <div className="box-border flex items-center justify-center w-12.75 h-6.5 border border-white/10 rounded-lg">
+                    <span className="font-vietnam font-medium text-xs leading-4.5 tracking-[-0.44px] text-white">
+                      ≤ 15%
+                    </span>
+                  </div>
+                </div>
+
+                {/* Min capacity */}
+                <div className="absolute left-4.5 top-23.75 flex items-center gap-1.75">
+                  <span className="font-vietnam font-medium text-base leading-5 text-white">
+                    Min capacity
+                  </span>
+                </div>
+                {/* Min capacity value */}
+                <div className="absolute right-3 top-23 flex items-center gap-1.5">
+                  <div className="box-border flex items-center justify-center w-27.75 h-6.5 border border-white/10 rounded-lg">
+                    <span className="font-vietnam font-medium text-xs leading-4.5 tracking-[-0.44px] text-white">
+                      ≥ 50,000 KROWN
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
