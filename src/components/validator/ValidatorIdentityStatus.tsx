@@ -1,32 +1,35 @@
-import { CheckCircle, Server, Key, Calendar, Copy } from "lucide-react";
 import { InfoCard } from "../cards";
+import {
+  ServerIcon,
+  TikIcon,
+  ValidatorKey,
+  CalendarIcon,
+  CopyIcon,
+} from "../icons";
 
 const cardData = [
   {
     label: "Validator Status",
     value: "Accepted",
-    icon: <CheckCircle className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <TikIcon className="w-5 h-5" />,
   },
   {
     label: "Node Mode",
     value: "Self-Hosted",
-    icon: <Server className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <ServerIcon className="w-5 h-5 [&_path]:stroke-[#00C48C]" />,
   },
   {
     label: "Validator Key",
     value: "0xchf..364",
-    icon: <Key className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <ValidatorKey className="w-5 h-5" />,
     secondaryContent: (
-      <Copy
-        className="w-5 h-5 text-[#AAB3D0] opacity-40 cursor-pointer hover:opacity-80"
-        strokeWidth={1.5}
-      />
+      <CopyIcon className="w-5 h-5 text-[#AAB3D0] opacity-200 cursor-pointer hover:opacity-80" />
     ),
   },
   {
     label: "Approved On",
     value: "Nov 25, 2025",
-    icon: <Calendar className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <CalendarIcon className="w-5 h-5" />,
   },
 ];
 

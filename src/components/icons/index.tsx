@@ -637,3 +637,234 @@ export const WalletIcon = ({ size = 16, className = "" }) => (
     />
   </svg>
 );
+
+export const ShieldFilledIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M18.54 4.12003L13.04 2.06003C12.47 1.85003 11.54 1.85003 10.97 2.06003L5.47 4.12003C4.41 4.52003 3.55 5.76003 3.55 6.89003V14.99C3.55 15.8 4.08 16.87 4.73 17.35L10.23 21.46C11.2 22.19 12.79 22.19 13.76 21.46L19.26 17.35C19.91 16.86 20.44 15.8 20.44 14.99V6.89003C20.45 5.76003 19.59 4.52003 18.54 4.12003ZM15.48 9.72003L11.18 14.02C11.03 14.17 10.84 14.24 10.65 14.24C10.46 14.24 10.27 14.17 10.12 14.02L8.52 12.4C8.23 12.11 8.23 11.63 8.52 11.34C8.81 11.05 9.29 11.05 9.58 11.34L10.66 12.42L14.43 8.65003C14.72 8.36003 15.2 8.36003 15.49 8.65003C15.78 8.94003 15.78 9.43003 15.48 9.72003Z"
+      fill="white"
+    />
+  </svg>
+);
+
+export const LeftArrowIcon = ({ size = 18, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M14.1752 9L3.375 9"
+      stroke="white"
+      stroke-width="1.5"
+      stroke-linecap="square"
+    />
+    <path
+      d="M10.0876 13.5184L14.6251 9.00044L10.0876 4.48169"
+      stroke="white"
+      stroke-width="1.5"
+      stroke-linecap="square"
+    />
+  </svg>
+);
+
+export const ValidatorKey = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M16.4917 12.4417C14.775 14.1501 12.3167 14.6751 10.1583 14.0001L6.23334 17.9167C5.95001 18.2084 5.39168 18.3834 4.99168 18.3251L3.17501 18.0751C2.57501 17.9917 2.01668 17.4251 1.92501 16.8251L1.67501 15.0084C1.61668 14.6084 1.80834 14.0501 2.08334 13.7667L6.00001 9.85006C5.33334 7.68339 5.85001 5.22506 7.56668 3.51672C10.025 1.05839 14.0167 1.05839 16.4833 3.51672C18.95 5.97506 18.95 9.98339 16.4917 12.4417Z"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M5.74167 14.575L7.65834 16.4916"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12.0833 9.16663C12.7737 9.16663 13.3333 8.60698 13.3333 7.91663C13.3333 7.22627 12.7737 6.66663 12.0833 6.66663C11.393 6.66663 10.8333 7.22627 10.8333 7.91663C10.8333 8.60698 11.393 9.16663 12.0833 9.16663Z"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const CalendarIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M6.66669 1.66663V4.16663"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M13.3333 1.66663V4.16663"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M2.91669 7.57495H17.0834"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M17.5 7.08329V14.1666C17.5 16.6666 16.25 18.3333 13.3333 18.3333H6.66667C3.75 18.3333 2.5 16.6666 2.5 14.1666V7.08329C2.5 4.58329 3.75 2.91663 6.66667 2.91663H13.3333C16.25 2.91663 17.5 4.58329 17.5 7.08329Z"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9.99626 11.4167H10.0037"
+      stroke="#00C48C"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M6.91191 11.4167H6.91939"
+      stroke="#00C48C"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M6.91191 13.9167H6.91939"
+      stroke="#00C48C"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const CopyIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <g
+      opacity=".23"
+      stroke="#aab3d0"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M13.333 10.75v3.5c0 2.917-1.166 4.083-4.083 4.083h-3.5c-2.917 0-4.083-1.166-4.083-4.083v-3.5c0-2.917 1.166-4.083 4.083-4.083h3.5c2.917 0 4.083 1.166 4.083 4.083" />
+      <path d="M18.333 5.75v3.5c0 2.917-1.166 4.083-4.083 4.083h-.917V10.75c0-2.917-1.166-4.083-4.083-4.083H6.667V5.75c0-2.917 1.166-4.083 4.083-4.083h3.5c2.917 0 4.083 1.166 4.083 4.083" />
+    </g>
+  </svg>
+);
+
+export const FeesPaidIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M14.167 17.083H5.833c-2.5 0-4.166-1.25-4.166-4.166V7.083c0-2.916 1.666-4.166 4.166-4.166h8.334c2.5 0 4.166 1.25 4.166 4.166v5.834c0 2.916-1.666 4.166-4.166 4.166"
+      stroke="#00c48c"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m5.833-6.667h-2.5"
+      stroke="#00c48c"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M6.667 14.167h-2.5"
+      stroke="#292d32"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const RewwardIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M15.4166 10.5416V13.625C15.4166 16.225 12.9916 18.3333 9.99998 18.3333C7.00831 18.3333 4.58331 16.225 4.58331 13.625V10.5416C4.58331 13.1416 7.00831 15 9.99998 15C12.9916 15 15.4166 13.1416 15.4166 10.5416Z"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M15.4166 6.37496C15.4166 7.13329 15.2083 7.83329 14.8416 8.43329C13.95 9.89996 12.1166 10.8333 9.99998 10.8333C7.88331 10.8333 6.04998 9.89996 5.15832 8.43329C4.79165 7.83329 4.58331 7.13329 4.58331 6.37496C4.58331 5.07496 5.19164 3.89996 6.16664 3.04996C7.14997 2.19163 8.49998 1.66663 9.99998 1.66663C11.5 1.66663 12.85 2.19163 13.8333 3.04163C14.8083 3.89996 15.4166 5.07496 15.4166 6.37496Z"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M15.4166 6.37496V10.5416C15.4166 13.1416 12.9916 15 9.99998 15C7.00831 15 4.58331 13.1416 4.58331 10.5416V6.37496C4.58331 3.77496 7.00831 1.66663 9.99998 1.66663C11.5 1.66663 12.85 2.19163 13.8333 3.04163C14.8083 3.89996 15.4166 5.07496 15.4166 6.37496Z"
+      stroke="#00C48C"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

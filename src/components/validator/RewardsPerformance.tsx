@@ -1,5 +1,6 @@
 import { Activity, Banknote, Coins } from "lucide-react";
 import { InfoCard } from "../cards";
+import { FeesPaidIcon, RewwardIcon } from "../icons";
 
 const cardData = [
   {
@@ -11,7 +12,7 @@ const cardData = [
   {
     label: "Fees Paid",
     value: "24,500",
-    icon: <Banknote className="w-5 h-5" strokeWidth={1.5} />,
+    icon: <FeesPaidIcon className="w-5 h-5" />,
   },
 ];
 
@@ -52,7 +53,7 @@ export default function RewardsPerformance() {
         <InfoCard
           label="Net Rewards"
           value="220,500"
-          icon={<Coins className="w-5 h-5" strokeWidth={1.5} />}
+          icon={<RewwardIcon className="w-5 h-5" />}
         />
       </div>
     </div>

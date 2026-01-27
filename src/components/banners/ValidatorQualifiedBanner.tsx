@@ -1,4 +1,5 @@
 import { Check, Shield, ArrowRight } from "lucide-react";
+import { LeftArrowIcon, ShieldFilledIcon, TikIcon } from "../icons";
 
 export default function ValidatorQualifiedBanner() {
   return (
@@ -10,7 +11,7 @@ export default function ValidatorQualifiedBanner() {
       <div className="relative z-10 flex items-start gap-3 sm:gap-4">
         {/* Shield Icon Container */}
         <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00C48C] to-[#0E966F] border border-[rgba(255,255,255,0.1)] shadow-[0px_4px_20px_rgba(0,196,140,0.41)] rounded-xl flex-shrink-0">
-          <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-white" />
+          <ShieldFilledIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-white" />
         </div>
 
         {/* Text Content */}
@@ -33,10 +34,7 @@ export default function ValidatorQualifiedBanner() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3">
             <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-xl">
               <div className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0">
-                <Check
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C48C]"
-                  strokeWidth={1.67}
-                />
+                <TikIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C48C]" />
               </div>
               <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white">
                 Wallet age requirement met
@@ -45,10 +43,7 @@ export default function ValidatorQualifiedBanner() {
 
             <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-xl">
               <div className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0">
-                <Check
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C48C]"
-                  strokeWidth={1.67}
-                />
+                <TikIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C48C]" />
               </div>
               <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-white">
                 Transaction history sufficient
@@ -61,10 +56,7 @@ export default function ValidatorQualifiedBanner() {
             <span className="font-vietnam font-medium text-sm leading-6 tracking-[-0.3125px] text-white text-center">
               Apply as a validator
             </span>
-            <ArrowRight
-              className="w-[18px] h-[18px] text-white"
-              strokeWidth={1.5}
-            />
+            <LeftArrowIcon className="w-[18px] h-[18px] text-white" />
           </button>
         </div>
 

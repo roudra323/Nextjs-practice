@@ -2,6 +2,7 @@
 
 import { Wallet, Shield } from "lucide-react";
 import { InfoCard } from "../cards";
+import { WalletIcon } from "../icons";
 
 export default function StakeHoldings() {
   return (
@@ -17,7 +18,7 @@ export default function StakeHoldings() {
           label="Balance"
           value="128.67K"
           valueSuffix="KROWN"
-          icon={<Wallet className="w-5 h-5" strokeWidth={1.5} />}
+          icon={<WalletIcon className="w-5 h-5" />}
         />
 
         <InfoCard

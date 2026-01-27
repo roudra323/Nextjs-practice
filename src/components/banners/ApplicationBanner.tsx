@@ -1,4 +1,5 @@
 import { AlertTriangle, CheckCircle, AlertCircle } from "lucide-react";
+import { TikIcon } from "../icons";
 
 type ApplicationStatus = "pending" | "approved" | "rejected";
 
@@ -21,7 +22,7 @@ const statusConfig = {
       "We've received your application and the Krown team is reviewing it. Check back soon for updates.",
   },
   approved: {
-    icon: CheckCircle,
+    icon: TikIcon,
     bgColor: "bg-[rgba(14,150,111,0.1)]",
     borderColor: "border-[rgba(14,150,111,0.2)]",
     iconColor: "text-[#00C48C]",
