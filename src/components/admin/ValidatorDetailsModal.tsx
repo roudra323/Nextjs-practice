@@ -48,10 +48,10 @@ export default function ValidatorDetailsModal({
       />
 
       {/* Modal */}
-      <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[95vw] max-w-[1015px] max-h-[90vh] overflow-y-auto">
+      <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[95vw] max-w-253.75 max-h-[90vh] overflow-y-auto">
         <div className="relative bg-[#0B0E17] border border-[rgba(255,255,255,0.1)] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] rounded-3xl p-6 overflow-hidden">
           {/* Decorative blur ellipse */}
-          <div className="absolute -left-36 -top-40 w-[486px] h-[476px] bg-white mix-blend-overlay blur-[61px] rotate-[30deg] opacity-90 pointer-events-none" />
+          <div className="absolute -left-36 -top-40 w-121.5 h-119 bg-white mix-blend-overlay blur-[61px] rotate-30 opacity-90 pointer-events-none" />
 
           {/* Close button - always in top right */}
           <button
@@ -80,8 +80,8 @@ export default function ValidatorDetailsModal({
               {/* Validator Info */}
               <div className="flex items-center gap-3">
                 {/* Avatar */}
-                <div className="flex items-center justify-center w-10 h-10 bg-[#34394D] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl flex-shrink-0">
-                  <span className="font-grotesk font-bold text-[15px] leading-[19px] text-white">
+                <div className="flex items-center justify-center w-10 h-10 bg-[#34394D] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl shrink-0">
+                  <span className="font-grotesk font-bold text-[15px] leading-4.75 text-white">
                     {validator.initials}
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export default function ValidatorDetailsModal({
                 className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-2xl p-4"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-vietnam font-medium text-sm leading-[19px] text-[#AAB3D0]">
+                  <span className="font-vietnam font-medium text-sm leading-4.75 text-[#AAB3D0]">
                     {stat.label}
                   </span>
                   <div className="flex items-center gap-0 px-1.5 h-5 bg-[rgba(14,150,111,0.1)] rounded-full">
@@ -146,7 +146,7 @@ export default function ValidatorDetailsModal({
                     </span>
                   </div>
                 </div>
-                <span className="font-grotesk font-medium text-xl leading-[31px] text-white">
+                <span className="font-grotesk font-medium text-xl leading-7.75 text-white">
                   {stat.value}
                 </span>
               </div>

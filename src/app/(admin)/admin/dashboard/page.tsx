@@ -146,7 +146,7 @@ export default function AdminDashboardPage() {
             value={stat.value}
             change={stat.change}
             isPositive={true}
-            className="w-full h-[87px]"
+            className="w-full h-21.75"
           />
         ))}
       </div>
@@ -160,7 +160,7 @@ export default function AdminDashboardPage() {
             value={stat.value}
             change={stat.change}
             isPositive={true}
-            className="w-full h-[87px]"
+            className="w-full h-21.75"
           />
         ))}
       </div>
@@ -169,7 +169,7 @@ export default function AdminDashboardPage() {
       <div className="flex items-center gap-2 mb-6">
         <button
           onClick={() => setActiveTab("nodeOverview")}
-          className={`flex items-center justify-center px-4 h-9 rounded-xl font-vietnam font-medium text-base leading-[18px] tracking-[-0.44px] transition-colors ${
+          className={`flex items-center justify-center px-4 h-9 rounded-xl font-vietnam font-medium text-base leading-4.5 tracking-[-0.44px] transition-colors ${
             activeTab === "nodeOverview"
               ? "bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] text-white"
               : "text-[#AAB3D0] hover:text-white"
@@ -179,7 +179,7 @@ export default function AdminDashboardPage() {
         </button>
         <button
           onClick={() => setActiveTab("validatorsPerformance")}
-          className={`flex items-center justify-center px-4 h-9 rounded-xl font-vietnam font-medium text-base leading-[18px] tracking-[-0.44px] transition-colors ${
+          className={`flex items-center justify-center px-4 h-9 rounded-xl font-vietnam font-medium text-base leading-4.5 tracking-[-0.44px] transition-colors ${
             activeTab === "validatorsPerformance"
               ? "bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] text-white"
               : "text-[#AAB3D0] hover:text-white"
@@ -332,7 +332,7 @@ export default function AdminDashboardPage() {
                 showProgress={metric.showProgress}
                 progressValue={metric.progressValue}
                 progressLabel={metric.progressLabel}
-                className="w-full h-[126px]"
+                className="w-full h-31.5"
               />
             ))}
           </div>

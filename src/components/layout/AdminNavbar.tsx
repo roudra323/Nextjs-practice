@@ -60,7 +60,7 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
       <header className="fixed top-0 left-0 right-0 h-14 sm:h-16 bg-[#0C0E19] border-b border-[rgba(255,255,255,0.14)] z-50">
         <div className="flex items-center justify-between h-full px-4 sm:px-7">
           {/* Left - Mobile Menu Button + Title */}
-          <div className="flex items-center gap-3 lg:w-[255px]">
+          <div className="flex items-center gap-3 lg:w-63.75">
             {/* Mobile menu button - only visible on mobile */}
             <button
               onClick={onMenuClick}
@@ -68,7 +68,7 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
             >
               <Menu className="w-5 h-5 text-white" strokeWidth={1.5} />
             </button>
-            <h1 className="font-vietnam font-medium text-sm sm:text-xl leading-[30px] tracking-[-0.45px] text-white">
+            <h1 className="font-vietnam font-medium text-sm sm:text-xl leading-7.5 tracking-[-0.45px] text-white">
               Admin Panel
             </h1>
           </div>
@@ -78,12 +78,12 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
             {/* Notification Bell */}
             <button
               onClick={() => setIsNotificationOpen(true)}
-              className="relative flex items-center justify-center w-9 h-9 sm:w-[36px] sm:h-[36px] rounded-xl hover:bg-[#1F222B] transition-colors"
+              className="relative flex items-center justify-center w-9 h-9 sm:w-9 sm:h-9 rounded-xl hover:bg-[#1F222B] transition-colors"
             >
               <Notifications />
               {/* Notification Badge - Red for Admin */}
               {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex items-center justify-center min-w-[20px] h-[20px] px-1 bg-[#EF4444] rounded-full text-white text-[11px] font-grotesk font-medium">
+                <span className="absolute -top-1 -right-1 flex items-center justify-center min-w-5 h-5 px-1 bg-[#EF4444] rounded-full text-white text-[11px] font-grotesk font-medium">
                   {unreadCount > 9 ? "9+" : unreadCount}
                 </span>
               )}
@@ -91,8 +91,8 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
 
             {/* Admin Profile */}
             <div className="flex items-center gap-1.75 px-1 py-2.5 sm:px-3 rounded-xl">
-              <div className="flex items-center justify-center w-[30px] h-[30px] bg-[#0E966F] rounded-md">
-                <span className="font-grotesk font-bold text-[15px] leading-[19px] text-white">
+              <div className="flex items-center justify-center w-7.5 h-7.5 bg-[#0E966F] rounded-md">
+                <span className="font-grotesk font-bold text-[15px] leading-4.75 text-white">
                   A
                 </span>
               </div>

@@ -62,7 +62,7 @@ export default function AdminSidebar({
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-14 sm:top-16 w-[255px] h-[calc(100vh-56px)] sm:h-[calc(100vh-64px)] border-r border-[rgba(255,255,255,0.14)] bg-[#0C0E19] z-50 transition-transform duration-300 ${
+        className={`fixed left-0 top-14 sm:top-16 w-63.75 h-[calc(100vh-56px)] sm:h-[calc(100vh-64px)] border-r border-[rgba(255,255,255,0.14)] bg-[#0C0E19] z-50 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         }`}
       >

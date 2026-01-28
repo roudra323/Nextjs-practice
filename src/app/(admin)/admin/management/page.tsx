@@ -11,7 +11,7 @@ export default function ManagementPage() {
       </div>
 
       {/* Placeholder content */}
-      <div className="flex items-center justify-center h-[400px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
+      <div className="flex items-center justify-center h-100 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
         <div className="text-center">
           <div className="w-16 h-16 mx-auto mb-4 bg-[#131839] rounded-2xl flex items-center justify-center">
             <svg

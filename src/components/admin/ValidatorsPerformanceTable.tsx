@@ -187,7 +187,7 @@ export default function ValidatorsPerformanceTable() {
           </div>
 
           {/* Search Input */}
-          <div className="relative w-full sm:w-[280px]">
+          <div className="relative w-full sm:w-70">
             <div className="absolute left-3 top-1/2 -translate-y-1/2">
               <svg
                 width="16"
@@ -225,11 +225,11 @@ export default function ValidatorsPerformanceTable() {
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[800px]">
+        <table className="w-full min-w-200">
           {/* Table Header */}
           <thead>
             <tr className="border-b border-[rgba(255,255,255,0.1)]">
-              <th className="text-left py-2.5 px-2 w-[50px]">
+              <th className="text-left py-2.5 px-2 w-12.5">
                 <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
                   ID
                 </span>
@@ -282,7 +282,7 @@ export default function ValidatorsPerformanceTable() {
                   <div className="flex items-center gap-3">
                     {/* Avatar */}
                     <div className="flex items-center justify-center w-10 h-10 bg-[#34394D] shadow-[inset_0px_0px_12px_rgba(255,255,255,0.25)] rounded-xl">
-                      <span className="font-grotesk font-bold text-[15px] leading-[19px] text-white">
+                      <span className="font-grotesk font-bold text-[15px] leading-4.75 text-white">
                         {validator.initials}
                       </span>
                     </div>
