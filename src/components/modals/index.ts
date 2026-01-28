@@ -10,4 +10,5 @@ export { default as NodeSetupModal } from "./NodeSetupModal";
 export { default as ContactFormPanel } from "./ContactFormPanel";
 export { default as UnstakeModal } from "./UnstakeModal";
 export { default as UnstakeDetailsModal } from "./UnstakeDetailsModal";
+export { default as AdminProfileModal } from "./AdminProfileModal";
 export type { Notification } from "./NotificationPanel";
