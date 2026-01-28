@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AdminStatCard, BlockCard } from "@/components";
+import ValidatorsPerformanceTable from "@/components/admin/ValidatorsPerformanceTable";
 
 // Stats data for the dashboard
 const topRowStats = [
@@ -188,148 +189,155 @@ export default function AdminDashboardPage() {
         </button>
       </div>
 
-      {/* Main Content - Two Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        {/* Proposal History */}
-        <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl p-5">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white">
-              Proposal History
-            </h2>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#0E966F] rounded-full animate-pulse" />
-              <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#0E966F]">
-                LIVE
-              </span>
+      {/* Conditional Content Based on Active Tab */}
+      {activeTab === "validatorsPerformance" ? (
+        <ValidatorsPerformanceTable />
+      ) : (
+        <>
+          {/* Main Content - Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            {/* Proposal History */}
+            <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white">
+                  Proposal History
+                </h2>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[#0E966F] rounded-full animate-pulse" />
+                  <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#0E966F]">
+                    LIVE
+                  </span>
+                </div>
+              </div>
+              <p className="font-vietnam font-normal text-[15px] leading-5 tracking-[-0.15px] text-[#AAB3D0] mb-4">
+                Last 24 hours
+              </p>
+
+              {/* Bar Chart Placeholder */}
+              <div className="h-auto sm:h-auto flex items-end justify-between gap-1 sm:gap-3 px-0 sm:px-4 mb-6 overflow-hidden">
+                {[
+                  { proposed: 93, finalized: 29, timeout: 33 },
+                  { proposed: 31, finalized: 92, timeout: 45 },
+                  { proposed: 128, finalized: 80, timeout: 34 },
+                  { proposed: 117, finalized: 45, timeout: 57 },
+                  { proposed: 117, finalized: 57, timeout: 45 },
+                  { proposed: 117, finalized: 44, timeout: 57 },
+                  { proposed: 117, finalized: 44, timeout: 57 },
+                ].map((bar, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col gap-0 items-center flex-1 min-w-0"
+                  >
+                    <div
+                      className="w-full max-w-6 bg-[#0E966F] rounded-t-full transition-all"
+                      style={{ height: `${bar.finalized * 1.2}px` }}
+                    />
+                    <div
+                      className="w-full max-w-6 bg-[#8B5CF6] transition-all"
+                      style={{ height: `${bar.proposed * 1}px` }}
+                    />
+                    <div
+                      className="w-full max-w-6 bg-[#F4CD4D] rounded-b-full transition-all"
+                      style={{ height: `${bar.timeout * 0.8}px` }}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Legend */}
+              <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-3 sm:gap-4">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#8B5CF6] rounded" />
+                    <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
+                      Proposed
+                    </span>
+                    <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-white">
+                      456
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#0E966F] rounded" />
+                    <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
+                      Finalized
+                    </span>
+                    <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-white">
+                      442
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#EF4444] rounded" />
+                    <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
+                      Timeout
+                    </span>
+                    <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-white">
+                      14
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start sm:items-end">
+                  <span className="font-vietnam font-normal text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
+                    Success Rate
+                  </span>
+                  <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-[#0E966F]">
+                    96.9%
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Recent Blocks */}
+            <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl p-5">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white">
+                  Recent Blocks
+                </h2>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[#0E966F] rounded-full animate-pulse" />
+                  <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#0E966F]">
+                    LIVE
+                  </span>
+                </div>
+              </div>
+              <p className="font-vietnam font-normal text-[15px] leading-5 tracking-[-0.15px] text-[#AAB3D0] mb-4">
+                Latest proposed blocks
+              </p>
+
+              {/* Blocks List */}
+              <div className="flex flex-col gap-2">
+                {recentBlocks.map((block, index) => (
+                  <BlockCard
+                    key={index}
+                    blockNumber={block.blockNumber}
+                    proposer={block.proposer}
+                    proposerInitials={block.proposerInitials}
+                    round={block.round}
+                    txCount={block.txCount}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-          <p className="font-vietnam font-normal text-[15px] leading-5 tracking-[-0.15px] text-[#AAB3D0] mb-4">
-            Last 24 hours
-          </p>
 
-          {/* Bar Chart Placeholder */}
-          <div className="h-auto sm:h-auto flex items-end justify-between gap-1 sm:gap-3 px-0 sm:px-4 mb-6 overflow-hidden">
-            {[
-              { proposed: 93, finalized: 29, timeout: 33 },
-              { proposed: 31, finalized: 92, timeout: 45 },
-              { proposed: 128, finalized: 80, timeout: 34 },
-              { proposed: 117, finalized: 45, timeout: 57 },
-              { proposed: 117, finalized: 57, timeout: 45 },
-              { proposed: 117, finalized: 44, timeout: 57 },
-              { proposed: 117, finalized: 44, timeout: 57 },
-            ].map((bar, index) => (
-              <div
+          {/* Metrics Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {metricsData.map((metric, index) => (
+              <AdminStatCard
                 key={index}
-                className="flex flex-col gap-0 items-center flex-1 min-w-0"
-              >
-                <div
-                  className="w-full max-w-6 bg-[#0E966F] rounded-t-full transition-all"
-                  style={{ height: `${bar.finalized * 1.2}px` }}
-                />
-                <div
-                  className="w-full max-w-6 bg-[#8B5CF6] transition-all"
-                  style={{ height: `${bar.proposed * 1}px` }}
-                />
-                <div
-                  className="w-full max-w-6 bg-[#F4CD4D] rounded-b-full transition-all"
-                  style={{ height: `${bar.timeout * 0.8}px` }}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Legend */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-3 sm:gap-4">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#8B5CF6] rounded" />
-                <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
-                  Proposed
-                </span>
-                <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-white">
-                  456
-                </span>
-              </div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#0E966F] rounded" />
-                <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
-                  Finalized
-                </span>
-                <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-white">
-                  442
-                </span>
-              </div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#EF4444] rounded" />
-                <span className="font-vietnam font-medium text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
-                  Timeout
-                </span>
-                <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-white">
-                  14
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col items-start sm:items-end">
-              <span className="font-vietnam font-normal text-xs sm:text-sm leading-5 tracking-[-0.15px] text-[#AAB3D0]">
-                Success Rate
-              </span>
-              <span className="font-grotesk font-medium text-sm sm:text-base leading-6 tracking-[-0.3125px] text-[#0E966F]">
-                96.9%
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Recent Blocks */}
-        <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-3xl p-5">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="font-vietnam font-medium text-xl leading-6 tracking-[-0.15px] text-white">
-              Recent Blocks
-            </h2>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#0E966F] rounded-full animate-pulse" />
-              <span className="font-vietnam font-medium text-sm leading-5 tracking-[-0.15px] text-[#0E966F]">
-                LIVE
-              </span>
-            </div>
-          </div>
-          <p className="font-vietnam font-normal text-[15px] leading-5 tracking-[-0.15px] text-[#AAB3D0] mb-4">
-            Latest proposed blocks
-          </p>
-
-          {/* Blocks List */}
-          <div className="flex flex-col gap-2">
-            {recentBlocks.map((block, index) => (
-              <BlockCard
-                key={index}
-                blockNumber={block.blockNumber}
-                proposer={block.proposer}
-                proposerInitials={block.proposerInitials}
-                round={block.round}
-                txCount={block.txCount}
+                label={metric.label}
+                value={metric.value}
+                change={metric.change}
+                isPositive={metric.isPositive !== false}
+                showSparkline={metric.showSparkline}
+                showProgress={metric.showProgress}
+                progressValue={metric.progressValue}
+                progressLabel={metric.progressLabel}
+                className="w-full h-[126px]"
               />
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Metrics Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        {metricsData.map((metric, index) => (
-          <AdminStatCard
-            key={index}
-            label={metric.label}
-            value={metric.value}
-            change={metric.change}
-            isPositive={metric.isPositive !== false}
-            showSparkline={metric.showSparkline}
-            showProgress={metric.showProgress}
-            progressValue={metric.progressValue}
-            progressLabel={metric.progressLabel}
-            className="w-full h-[126px]"
-          />
-        ))}
-      </div>
+        </>
+      )}
     </div>
   );
 }

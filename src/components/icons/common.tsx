@@ -298,3 +298,29 @@ export const InfoIconGreen = ({ size = 51, className = "" }) => (
     </defs>
   </svg>
 );
+
+export const EyeIcon = ({ size = 16, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M1.374 8.232a.67.67 0 0 1 0-.464 7.167 7.167 0 0 1 13.25 0 .67.67 0 0 1 0 .464 7.167 7.167 0 0 1-13.25 0"
+      stroke="#0e966f"
+      stroke-width="1.333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+      stroke="#0e966f"
+      stroke-width="1.333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
