@@ -388,3 +388,292 @@ export const ClockIcon = ({ size = 24, className = "" }) => (
     />
   </svg>
 );
+
+// Self Hosted Icon (driver-2)
+export const SelfHostedIcon = ({ size = 12, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M3 3.125V4"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5 3.125V4"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M1 1V11H11V1H1Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M3 8V8.875"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M5 8V8.875"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M7 3.625V4"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M7 8.5V8.875"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M1 6H11"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Managed Icon (shield-tick)
+export const ManagedIcon = ({ size = 12, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M5.245 1.115L3.025 1.955C2.45 2.17 1.98 2.85 1.98 3.46V7.175C1.98 7.765 2.37 8.54 2.845 8.895L4.695 10.3C5.4 10.83 6.56 10.83 7.265 10.3L9.115 8.895C9.59 8.54 9.98 7.765 9.98 7.175V3.46C9.98 2.845 9.51 2.165 8.935 1.95L6.715 1.115C6.31 0.96 5.645 0.96 5.245 1.115Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M4.52498 5.945L5.32498 6.745L7.47498 4.595"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Shared Icon (profile-2user)
+export const SharedIcon = ({ size = 12, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M4.56 5.435C4.515 5.43 4.46 5.43 4.41 5.435C3.305 5.395 2.425 4.49 2.425 3.375C2.425 2.235 3.345 1.315 4.49 1.315C5.63 1.315 6.555 2.24 6.555 3.375C6.55 4.49 5.67 5.395 4.56 5.435Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8.14 2C9.06 2 9.8 2.745 9.8 3.66C9.8 4.555 9.09 5.285 8.21 5.32C8.175 5.315 8.135 5.315 8.095 5.32"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M2.07502 7.285C0.950024 8.04 0.950024 9.26 2.07502 10.01C3.35502 10.865 5.47002 10.865 6.75002 10.01C7.87502 9.255 7.87502 8.035 6.75002 7.285C5.47502 6.435 3.36002 6.435 2.07502 7.285Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9.165 9.75C9.505 9.675 9.825 9.53 10.085 9.315C10.81 8.745 10.81 7.81 10.085 7.24C9.83 7.03 9.515 6.89 9.18 6.81"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Review Icon (eye with plus)
+export const ReviewIcon = ({ size = 16, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M1.33334 8.33333C1.33334 8.33333 3.33334 3.33333 8.00001 3.33333C12.6667 3.33333 14.6667 8.33333 14.6667 8.33333C14.6667 8.33333 12.6667 13.3333 8.00001 13.3333C3.33334 13.3333 1.33334 8.33333 1.33334 8.33333Z"
+      stroke="currentColor"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8 10C8.92047 10 9.66667 9.25381 9.66667 8.33333C9.66667 7.41286 8.92047 6.66667 8 6.66667C7.07953 6.66667 6.33333 7.41286 6.33333 8.33333C6.33333 9.25381 7.07953 10 8 10Z"
+      stroke="currentColor"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Wallet Icon with checkmark
+export const WalletCheckIcon = ({ size = 16, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M2 5.33333V10.6667C2 12 2.66667 13.3333 4.66667 13.3333H11.3333C13.3333 13.3333 14 12 14 10.6667V5.33333C14 4 13.3333 2.66667 11.3333 2.66667H4.66667C2.66667 2.66667 2 4 2 5.33333Z"
+      stroke="currentColor"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M2 5.33333H14"
+      stroke="currentColor"
+      strokeWidth="1.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Key Icon
+export const KeyIcon = ({ size = 20, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M3.509 7.558A6.31 6.31 0 0 1 9.842 6l3.925-3.917c.283-.291.842-.466 1.242-.408l1.816.25c.6.083 1.159.65 1.25 1.25l.25 1.817c.059.4-.133.958-.408 1.241L14 10.15c.667 2.167.15 4.625-1.566 6.333-2.459 2.459-6.45 2.459-8.917 0a6.315 6.315 0 0 1-.008-8.925m10.75-2.133-1.917-1.917"
+      stroke="#0e966f"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M7.917 10.833a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"
+      stroke="#0e966f"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+// Download Icon
+export const DownloadIcon = ({ size = 16, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M6.21333 6.14667L8 7.92667L9.78667 6.14667"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8 2.66667V7.90667"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M2.66667 8.66667C2.66667 11.24 4.66667 13.3333 8 13.3333C11.3333 13.3333 13.3333 11.24 13.3333 8.66667"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Check Circle Icon (filled)
+export const CheckCircleIcon = ({ size = 20, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+      stroke="currentColor"
+      strokeWidth="1.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M6.25 10L8.75 12.5L13.75 7.5"
+      stroke="currentColor"
+      strokeWidth="1.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Uptime Check Icon
+export const UptimeIcon = ({ size = 14, className = "" }) => (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clip-path="url(#a)">
+      <path
+        d="M12.834 7h-1.447a1.17 1.17 0 0 0-1.126.852l-1.37 4.876a.146.146 0 0 1-.28 0L5.39 1.272a.146.146 0 0 0-.28 0L3.738 6.148A1.17 1.17 0 0 1 2.62 7H1.167"
+        stroke="#00c48c"
+        stroke-width="1.167"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h14v14H0z" />
+      </clipPath>
+    </defs>
+  </svg>
+);
