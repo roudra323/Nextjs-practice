@@ -324,3 +324,67 @@ export const EyeIcon = ({ size = 16, className = "" }) => (
     />
   </svg>
 );
+
+export const AdminProfileModalIcon = ({ size = 12, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M5.78 1.633a.25.25 0 0 1 .439 0l1.476 2.802a.5.5 0 0 0 .758.147L10.59 2.75a.25.25 0 0 1 .4.26L9.572 8.131a.5.5 0 0 1-.478.367h-6.19a.5.5 0 0 1-.479-.367L1.01 3.01a.25.25 0 0 1 .399-.26l2.138 1.832a.5.5 0 0 0 .758-.147zM2.5 10.5h7"
+      stroke="#0e966f"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const LogoutIcon = ({ size = 20, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="m14.533 12.183 2.133-2.133-2.133-2.133M8.134 10.05h8.475M9.8 16.667c-3.683 0-6.666-2.5-6.666-6.667S6.117 3.333 9.8 3.333"
+      stroke="#fe5058"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const ClockIcon = ({ size = 24, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M15.71 15.18L12.61 13.33C12.07 13.01 11.63 12.24 11.63 11.61V7.51"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

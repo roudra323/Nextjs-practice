@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Menu } from "lucide-react";
-import { NotificationPanel, Notification } from "../modals";
+import { NotificationPanel, Notification, AdminProfileModal } from "../modals";
 import { Notifications } from "../icons";
 
 interface AdminNavbarProps {
@@ -47,7 +47,9 @@ const sampleAdminNotifications: Notification[] = [
 
 export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [notifications, setNotifications] = useState(sampleAdminNotifications);
+  const profileRef = useRef<HTMLButtonElement>(null);
 
   const unreadCount = notifications.filter((n) => !n.isRead).length;
 
@@ -89,8 +91,12 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
               )}
             </button>
 
-            {/* Admin Profile */}
-            <div className="flex items-center gap-1.75 px-1 py-2.5 sm:px-3 rounded-xl">
+            {/* Admin Profile - Click to open modal */}
+            <button
+              ref={profileRef}
+              onClick={() => setIsProfileModalOpen(!isProfileModalOpen)}
+              className="flex items-center gap-1.75 px-1 py-2.5 sm:px-3 rounded-xl hover:bg-[#1F222B] transition-colors cursor-pointer"
+            >
               <div className="flex items-center justify-center w-7.5 h-7.5 bg-[#0E966F] rounded-md">
                 <span className="font-grotesk font-bold text-[15px] leading-4.75 text-white">
                   A
@@ -99,7 +105,7 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
               <span className="hidden sm:block font-vietnam font-medium text-base leading-5 text-white">
                 Admin
               </span>
-            </div>
+            </button>
           </div>
         </div>
       </header>
@@ -111,6 +117,13 @@ export default function AdminNavbar({ onMenuClick }: AdminNavbarProps) {
         notifications={notifications}
         unreadCount={unreadCount}
         onMarkAllRead={handleMarkAllRead}
+      />
+
+      {/* Admin Profile Modal */}
+      <AdminProfileModal
+        isOpen={isProfileModalOpen}
+        onClose={() => setIsProfileModalOpen(false)}
+        anchorRef={profileRef}
       />
     </>
   );
