@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { EyeIcon } from "../icons";
+import ValidatorDetailsModal from "./ValidatorDetailsModal";
 
 // Mock data for validators
 const validatorsData = [
@@ -110,6 +111,20 @@ const validatorsData = [
 export default function ValidatorsPerformanceTable() {
   const [timePeriod, setTimePeriod] = useState<"24hrs" | "60mins">("24hrs");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedValidator, setSelectedValidator] = useState<
+    (typeof validatorsData)[0] | null
+  >(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleViewValidator = (validator: (typeof validatorsData)[0]) => {
+    setSelectedValidator(validator);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedValidator(null);
+  };
 
   const filteredData = validatorsData.filter(
     (v) =>
@@ -313,7 +328,10 @@ export default function ValidatorsPerformanceTable() {
 
                 {/* Action */}
                 <td className="py-3 px-2">
-                  <button className="flex items-center justify-center w-4 h-4 text-[#0E966F] hover:opacity-80 transition-opacity">
+                  <button
+                    onClick={() => handleViewValidator(validator)}
+                    className="flex items-center justify-center w-4 h-4 text-[#0E966F] hover:opacity-80 transition-opacity"
+                  >
                     <EyeIcon />
                   </button>
                 </td>
@@ -331,6 +349,13 @@ export default function ValidatorsPerformanceTable() {
           </p>
         </div>
       )}
+
+      {/* Validator Details Modal */}
+      <ValidatorDetailsModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        validator={selectedValidator}
+      />
     </div>
   );
 }
