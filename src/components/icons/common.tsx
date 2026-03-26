@@ -311,14 +311,14 @@ export const EyeIcon = ({ size = 16, className = "" }) => (
     <path
       d="M1.374 8.232a.67.67 0 0 1 0-.464 7.167 7.167 0 0 1 13.25 0 .67.67 0 0 1 0 .464 7.167 7.167 0 0 1-13.25 0"
       stroke="#0e966f"
-      stroke-width="1.333"
+      strokeWidth="1.333"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
       stroke="#0e966f"
-      stroke-width="1.333"
+      strokeWidth="1.333"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -355,7 +355,7 @@ export const LogoutIcon = ({ size = 20, className = "" }) => (
     <path
       d="m14.533 12.183 2.133-2.133-2.133-2.133M8.134 10.05h8.475M9.8 16.667c-3.683 0-6.666-2.5-6.666-6.667S6.117 3.333 9.8 3.333"
       stroke="#fe5058"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -579,7 +579,7 @@ export const KeyIcon = ({ size = 20, className = "" }) => (
     <path
       d="M3.509 7.558A6.31 6.31 0 0 1 9.842 6l3.925-3.917c.283-.291.842-.466 1.242-.408l1.816.25c.6.083 1.159.65 1.25 1.25l.25 1.817c.059.4-.133.958-.408 1.241L14 10.15c.667 2.167.15 4.625-1.566 6.333-2.459 2.459-6.45 2.459-8.917 0a6.315 6.315 0 0 1-.008-8.925m10.75-2.133-1.917-1.917"
       stroke="#0e966f"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -587,7 +587,7 @@ export const KeyIcon = ({ size = 20, className = "" }) => (
     <path
       d="M7.917 10.833a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"
       stroke="#0e966f"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -665,7 +665,7 @@ export const UptimeIcon = ({ size = 14, className = "" }) => (
       <path
         d="M12.834 7h-1.447a1.17 1.17 0 0 0-1.126.852l-1.37 4.876a.146.146 0 0 1-.28 0L5.39 1.272a.146.146 0 0 0-.28 0L3.738 6.148A1.17 1.17 0 0 1 2.62 7H1.167"
         stroke="#00c48c"
-        stroke-width="1.167"
+        strokeWidth="1.167"
         stroke-linecap="round"
         stroke-linejoin="round"
       />

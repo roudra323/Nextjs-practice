@@ -133,7 +133,7 @@ export const ValidatorApplicationIcon = ({ size = 20, className = "" }) => (
     <path
       d="M6.66667 5H17.5M6.66667 10H17.5M6.66667 15H17.5M2.5 5H2.50833M2.5 10H2.50833M2.5 15H2.50833"
       stroke="#AAB3D0"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
